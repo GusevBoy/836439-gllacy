@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Виктор Гусев](https://up.htmlacademy.ru/htmlcss/22/user/836439).
-* Наставник: `Евгений Алипкин`.
+* Наставник: [Евгений Алипкин](https://htmlacademy.ru/profile/ealipkin).
 
 ---
 
