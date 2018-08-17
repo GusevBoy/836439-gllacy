@@ -7,132 +7,171 @@
   <body>
     <header class="header">
       <a class="header__link" href="index.html">
-        <img class="header__logo" src="http://placehold.it/150x100" alt="Gllacy Shop">
+        <img class="header__logo" src="img/icons/logo.svg" alt="Gllacy Shop" width="100" height="50" >
       </a>
       <nav class="header__main-nav">
-	    	<ul class="header__site-nav header__site-nav_hidden site-nav">
-	    		<li class="site-nav__item site-nav__item_active"><a class="site-nav__link" href="index.html">Каталог</a>
-            <ul class="site-nav__list">
-              <li class="site-nav__item"><a class="site-nav__link" href="#">Новинки</a></li>
-              <li class="site-nav__item"><a class="site-nav__link" href="#">Сливочные</a></li>
-              <li class="site-nav__item"><a class="site-nav__link" href="#">Щербеты</a></li>
-              <li class="site-nav__item"><a class="site-nav__link" href="#">Фруктовый лед</a></li>
-              <li class="site-nav__item"><a class="site-nav__link" href="#">Мелорин</a></li>
+        <!-- Навигация по сайту, блок располагается слева -->
+	    	<ul class="header__site-nav site-nav">
+	    		<li class="site-nav__item">
+            <a class="site-nav__link" href="milk.html">Каталог</a>
+            <ul class="site-nav__popup-menu site-nav__popup-menu_hidden popup-menu"> <!-- Поменял на site-nav__popup-menu так как в выпадающем меню стиль текста отличается-->
+              <li class="popup-menu__item">
+                <a class="popup-menu__link" href="#">Новинки</a> <!-- как правильно выделить и обозвать класс ? -->
+              </li>
+              <li class="popup-menu__item">
+                <a class="popup-menu__link" href="milk.html">Сливочные</a>
+              </li>
+              <li class="popup-menu__item">
+                <a class="popup-menu__link" href="#">Щербеты</a>
+              </li>
+              <li class="popup-menu__item">
+                <a class="popup-menu__link" href="#">Фруктовый лед</a>
+              </li>
+              <li class="popup-menu__item">
+                <a class="popup-menu__link" href="#">Мелорин</a>
+              </li>
             </ul>
           </li>
-	    		<li class="site-nav__item"><a class="site-nav__link" href="#">Доставка и оплата</a></li>
-	    		<li class="site-nav__item"><a class="site-nav__link" href="#">О компании</a></li>
+	    		<li class="site-nav__item">
+            <a class="site-nav__link" href="#">Доставка и оплата</a>
+          </li>
+	    		<li class="site-nav__item">
+            <a class="site-nav__link" href="#">О компании</a>
+          </li>
 	    	</ul>
         <div class="header__search">
-  	    	<img class="header__img" src="http://placehold.it/25x25" alt=""> <!-- Решил добавить img так как без картинки не понятно, что это поиск -->
-          <form class="header__form form" action="#" method="post">
-            <input class="form__input" type="form" name="" value="Что ищем?"></input>
+  	    	<img class="header__img" src="img/icons/loupe.svg"  alt="search" width="20" height="20"> <!-- Решил добавить img так как без картинки не понятно, что это поиск -->
+          <form class="header__form header__form_hidden form" action="#" method="post"> <!-- Спрятал форму -->
+            <input class="form__input" type="text" name="#" value="Что ищем?">
           </form>
         </div>
         <div class="header__login">
-          <img class="header__img">
-          <span class="header__description">Вход</span>
+          <img class="header__img" src="img/icons/entrance.svg" alt="entrance" width="20" height="20"> <!-- Возможно стоит задать через фон ? -->
+          <span class="header__description">Вход</span> <!-- как лучше обозвать и стоит ли через span делать? -->
           <form class="header__form header__form_hidden form" action="#" method="post">
-            <input class="form__input" type="form" name="" value="Электроная почта"></input>
-            <input class="form__input" type="form" name="" value="Пароль"></input>
+            <input class="form__input" type="email" name="#" value="Электроная почта">
+            <input class="form__input" type="password" name="#" value="Пароль">
+            <button class="header__button button" type="submit" name="button">Войти</button>
+            <ul class="header__user-nav user-nav"> <!-- Вложил в форму -->
+              <li class="user-nav__item">
+                <a class="user-nav__link" href="#">Забыли пароль?</a>
+              </li>
+              <li class="user-nav__item">
+                <a class="user-nav__link" href="#">Пароль</a>
+              </li>
+            </ul>
           </form>
-          <button class="header__button" type="button" name="button">Войти</button>
-          <ul class="header__user-nav user-nav">
-            <li class="user-nav__item"><a class="user-nav__link" href="#">Забыли пароль?</a></li>
-            <li class="user-nav__item"><a class="user-nav__link" href="#">Пароль</a></li>
-          </ul>
         </div>
-        <div class="header__basket">
-          <a class="header__link" href="#">
-            <img class="header__img" src="http://placehold.it/25x25"> <!-- Решил добавить img так как без картинки не понятно, что это корзина -->
-            <span class="header__description">Пусто</span>
-            <div class="header__orders header__orders_hidden orders">
-              <table class="orders__form"><!-- Здесь будет таблица заказов --></table>
-              <button class="orders__button button" type="button" name="button"></button>
-            </div>
-          </a>
+        <div class="header__basket basket">
+          <img class="basket__img" src="img/icons/basket.svg" alt="Basket" width="20" height="20"> <!-- Решил добавить img так как без картинки не понятно, что это корзина -->
+          <span class="basket__description">Пусто</span> <!-- Возможно, лучше будет поменять description на title ? -->
+          <div class="basket__popup-menu popup-menu"> <!-- popup-menu - везде одинаковый стиль серый фон и скругленные края   -->
+              <table class="basket__table"><!-- Здесь будет таблица заказов --></table>
+              <a class="basket__button button" href="orders.html">Оформить заказ</a>
+          </div>
         </div>
 	    </nav>
       <section class="header__contacts contacts">
+        <h2 class="contacts__title contacts__title_hidden">Контактная информация</h2>
         <span class="contacts__work-time">c 10 до 20, ежедневно</span>
         <span class="contacts__phone">8 812 450-25-25</span>
       </section>
     </header>
-    <main class="conteiner">
-      <div class="offers">
-        <section class="offers__slaider">
-          /* Сдесь будет  Слайдер */
-        </section>
+    <main class="container">
+      <div class="slider">
+        <img src="img/content/ice-cream_1.png" width="500" height="500" alt="ice-cream" class="slider__img">
+        <img src="img/content/ice-cream_2.png" width="500" height="500" alt="ice-cream" class="slider__img slider__img_hidden">
+        <img src="img/content/ice-cream_3.png" width="500" height="500" alt="ice-cream" class="slider__img slider__img_hidden">
       </div>
-      <section class="news">
-        <section class="news__item item item__razz">
+      <div class="news">
+        <section class="news__item theme theme__razz"> <!-- Секции решил оставить, но уместно ли? -->
           <h2 class="news__title title">Малинка даром!</h2>
           <p class="news__subtitle subtitle">
             При покупке 2 кг любого фруктового мороженого,
             добавим в ваш заказ банку малиного варенья бесплатно
           </p>
         </section>
-        <section class="news__item item item__chocolate">
+        <section class="news__item theme theme__chocolate">
           <h2 class="news__title title">Шоколадки даром!</h2>
           <p class="news__subtitle subtitle">
             При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершено бесплатною
           </p>
         </section>
-      </section>
-      <section class="catalog">
-        <ul class="catalog__list">
-          <li class="catalog__item">
-              <img src="http://placehold.it/100x100" alt="" class="catalog__img">
-              <b class="catalog__price">380р</b>
-              <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-          </li>
-          <li class="catalog__item">
-              <img src="http://placehold.it/100x100" alt="" class="catalog__img">
-              <b class="catalog__price">280р</b>
-              <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочно-кофейное с кусочками шоколада</a></h3>
-          </li>
-          <li class="catalog__item">
-              <img src="http://placehold.it/100x100" alt="" class="catalog__img">
-              <b class="catalog__price">680р</b>
-              <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-          </li>
-          <li class="catalog__item">
-              <img src="http://placehold.it/100x100" alt="" class="catalog__img">
-              <b class="catalog__price">380р</b>
-              <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочное крем-брюле с карамельной подливкой</a></h3>
-          </li>
-        </ul>
-      </section>
-      <section class="facts">
-        <p class="facts__about-me">
+      </div>
+      <ul class="catalog">
+        <li class="catalog__item">
+            <img src="img/ice-cream/orange.jpg" alt="ice-cream_orange" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title">
+              <a href="#" class="catalog__link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            </h3>
+            <button  class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
+        </li>
+        <li class="catalog__item">
+            <img src="img/ice-cream/coffe.jpg" alt="ice-cream_coffe" class="catalog__img">
+            <b class="catalog__price">280р</b>
+            <h3 class="catalog__title">
+              <a href="#" class="catalog__link">Сливочно-кофейное с кусочками шоколада</a>
+            </h3>
+            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
+        </li>
+        <li class="catalog__item">
+            <img src="img/ice-cream/strawberry.jpg" alt="ice-cream_strawberry" class="catalog__img">
+            <b class="catalog__price">680р</b>
+            <h3 class="catalog__title">
+              <a href="#" class="catalog__link">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            </h3>
+            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
+        </li>
+        <li class="catalog__item">
+            <img src="img/ice-cream/Creme-brulee.jpg" alt="ice-cream_Creme-brulee" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title">
+              <a href="#" class="catalog__link">Сливочное крем-брюле с карамельной подливкой</a>
+            </h3>
+            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
+        </li>
+      </ul>
+
+      <div class="facts">
+        <h2 class="facts__title title"> <!-- Стоит ли так разбивать текст либо в одну строку писать лучше? -->
           Магазин Глэйси — это онлайн- и офлайн-магазин
           по продаже мороженого собственого производства на развес
-        </p>
-        <p class="facts__item">
-          Все наше мороженое изготавливается на собственном производстве,
-          с использованием современого оборудования и проверенных временем технологий.
-        </p>
-        <p class="facts__item">
-          Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
-          с которыми нас связывает долговременное сотрудничество.
-        </p>
-        <p class="facts__item">Все наше мороженое изготавливается на собственном производстве,
-        с использованием современого оборудования и проверенных временем технологий.</p>
-        <p class="facts__item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
-        с которыми нас связывает долговременное сотрудничество.</p>
-      </section>
+        </h2>
+        <ul class="facts__list">
+          <li class="facts__item facts__icon icon icon__ice">
+            Все наше мороженое изготавливается на собственном производстве,
+            с использованием современого оборудования и проверенных временем технологий.
+          </li>
+          <li class="facts__item facts__icon icon icon__leaf">
+            Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
+            с которыми нас связывает долговременное сотрудничество.
+          </li>
+          <li class="facts__item facts__icon icon icon__cow">
+            Все наше мороженое изготавливается на собственном производстве,
+            с использованием современого оборудования и проверенных временем технологий.
+          </li>
+          <li class="facts__item facts__icon icon icon__deg">
+            Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
+            с которыми нас связывает долговременное сотрудничество.
+          </li>
+        </ul>
+
+      </div>
       <article class="recipes">
         <p class="recipes__description">Новое в нашем блоге</p>
         <h4 class="recipes__title">10 способов сервировки фруктовых щербетов к столу</h4>
       </article>
-      <section class="subscribe">
+      <div class="subscribe"> <!--  Возможно опять лишняя обертка? -->
         <p class="subscribe__description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе все новости</p>
-        <input class="subscribe__input" type="fotm" name="" value="">
-        <button class="subscribe__button" type="button" name="button"></button>
-      </section>
-      <section class="map">
+        <form class="subscribe__form">
+          <input class="subscribe__input" type="email" name="#" value="">
+          <button class="subscribe__button button" type="button" name="button"></button>
+        </form>
+      </div>
+      <div class="map">
         <!--Сдесь будет карта -->
-        <section class="map__contacts contacts">
+        <section class="map__contacts contacts"> <!-- Не уверен насчет вложенности, возможно стоит вынести в одну плоскость, сначала заголовок потом описание -->
           <p class="contacts__item">
             Адрес главного офиса и офлайн-магазина:
             <span class="contacts__addres">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
@@ -142,39 +181,54 @@
             <span class="contacts__phone">8 812 450-25-25</span>
           </p>
           <span class="contacts__work-time">(c 10 до 20, ежедневно)</span>
-          <button class="map__button">Форма обратной связи</button>
+          <button class="map__button button">Форма обратной связи</button>
         </section>
-      </section>
+      </div>
     </main>
     <footer class="footer">
-      <div class="footer__social social">
-        <ul class="social__list">
-          <li calss="social__item"><a class="social__button" href="#"><img src="http://placehold.it/70x70" alt="" class="social__img"></a></li>
-          <li calss="social__item"><a class="social__button" href="#"><img src="http://placehold.it/70x70" alt="" class="social__img"></a></li>
-          <li calss="social__item"><a class="social__button" href="#"><img src="http://placehold.it/70x70" alt="" class="social__img"></a></li>
-          <li calss="social__item"><a class="social__button" href="#"><img src="http://placehold.it/70x70" alt="" class="social__img"></a></li>
-        </ul>
-      </div>
-      <div class="footer__information information">
-        <ul class="information__list">
-          <li class="information__item">
-            <a href="#" class="information__link">
-              <b class="information__important">Для поставщиков</b>
-            </a>
-          </li>
-          <li class="information__item">
-            <a href="#" class="information__link">Наши документы</a>
-          </li>
-          <li class="information__item">
-            <a href="#" class="information__link">О производстве</a>
-          </li>
-          <li class="information__item">
-            <a href="#" class="information__link">Экологические стандарты</a>
-          </li>
-        </ul>
-      </div>
-      <p class="footer-copyright">
-        <b>Сделано:</b> <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__button button" href="#">
+            <img src="img/icons/twitter.svg"   alt="twitter" class="social__img">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__button button" href="#">
+            <img src="img/icons/instagram.svg" alt="instagram" width="100" height="50" class="social__img">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__button button" href="#">
+            <img src="img/icons/facebook.svg" alt="facebook" width="100" height="50" class="social__img">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__button button" href="#">
+            <img src="img/icons/vk.svg" alt="VK" width="100" height="50" class="social__img">
+          </a>
+        </li>
+      </ul>
+      <ul class="footer__information information">
+        <li class="information__item">
+          <a href="#" class="information__link">
+            <b class="information__important">Для поставщиков</b>
+          </a>
+        </li>
+        <li class="information__item">
+          <a href="#" class="information__link">Наши документы</a>
+        </li>
+        <li class="information__item">
+          <a href="#" class="information__link">О производстве</a>
+        </li>
+        <li class="information__item">
+          <a href="#" class="information__link">Экологические стандарты</a>
+        </li>
+      </ul>
+      <p class="footer__copyright copyright">
+        <b class="copyright_iportant">Сделано:</b> <!-- Хочу не только через тэг b показать значимость, но еще хочу придумать класс, пока обозвал important -->
+        <a class="copyright__link" href="https://htmlacademy.ru">
+          <img class="copyright__img" src="img/icons/logo-htmlacademy" width="100" height="50" alt="HTML Academy">
+        </a>
       </p>
     </footer>
   </body>
