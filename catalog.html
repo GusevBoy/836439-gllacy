@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -7,255 +6,173 @@
   <body>
     <header class="header">
       <a class="header__link" href="index.html">
-        <img class="header__logo" src="img/icons/logo.svg" alt="Gllacy Shop" width="100" height="50" >
+        <img class="header__logo" src="http://placehold.it/150x100" alt="Gllacy Shop">
       </a>
       <nav class="header__main-nav">
-
-	    	<ul class="header__site-nav site-nav">
-	    		<li class="site-nav__item">
-            <a class="site-nav__link" href="milk.html">Каталог</a>
-            <ul class="site-nav__popup-menu site-nav__popup-menu_hidden popup-menu">
-              <li class="popup-menu__item">
-                <a class="popup-menu__link" href="#">Новинки</a>
-              </li>
-              <li class="popup-menu__item">
-                <a class="popup-menu__link" href="milk.html">Сливочные</a>
-              </li>
-              <li class="popup-menu__item">
-                <a class="popup-menu__link" href="#">Щербеты</a>
-              </li>
-              <li class="popup-menu__item">
-                <a class="popup-menu__link" href="#">Фруктовый лед</a>
-              </li>
-              <li class="popup-menu__item">
-                <a class="popup-menu__link" href="#">Мелорин</a>
-              </li>
+	    	<ul class="header__site-nav header__site-nav_hidden site-nav">
+	    		<li class="site-nav__item site-nav__item_active"><a class="site-nav__link" href="index.html">Каталог</a>
+            <ul class="site-nav__list">
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Новинки</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Сливочные</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Щербеты</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Фруктовый лед</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Мелорин</a></li>
             </ul>
           </li>
-	    		<li class="site-nav__item">
-            <a class="site-nav__link" href="#">Доставка и оплата</a>
-          </li>
-	    		<li class="site-nav__item">
-            <a class="site-nav__link" href="#">О компании</a>
-          </li>
+	    		<li class="site-nav__item"><a class="site-nav__link" href="#">Доставка и оплата</a></li>
+	    		<li class="site-nav__item"><a class="site-nav__link" href="#">О компании</a></li>
 	    	</ul>
         <div class="header__search">
-  	    	<img class="header__img" src="img/icons/loupe.svg"  alt="search" width="20" height="20">
-          <form class="header__form header__form_hidden form" action="#" method="post"> <!-- Спрятал форму -->
-            <input class="form__input" type="text" name="#" value="Что ищем?">
+  	    	<img class="header__img" src="http://placehold.it/25x25" alt=""> <!-- Решил добавить img так как без картинки не понятно, что это поиск -->
+          <form class="header__form form" action="#" method="post">
+            <input class="form__input" type="form" name="" value="Что ищем?"></input>
           </form>
         </div>
         <div class="header__login">
-          <img class="header__img" src="img/icons/entrance.svg" alt="entrance" width="20" height="20"> <!-- Возможно стоит задать через фон ? -->
-          <span class="header__description">Вход</span> <!-- как лучше обозвать и стоит ли через span делать? -->
+          <img class="header__img">
+          <span class="header__description">Вход</span>
           <form class="header__form header__form_hidden form" action="#" method="post">
-            <input class="form__input" type="email" name="#" value="Электроная почта">
-            <input class="form__input" type="password" name="#" value="Пароль">
-            <button class="header__button button" type="submit" name="button">Войти</button>
-            <ul class="header__user-nav user-nav"> <!-- Вложил в форму -->
-              <li class="user-nav__item">
-                <a class="user-nav__link" href="#">Забыли пароль?</a>
-              </li>
-              <li class="user-nav__item">
-                <a class="user-nav__link" href="#">Пароль</a>
-              </li>
-            </ul>
+            <input class="form__input" type="form" name="" value="Электроная почта"></input>
+            <input class="form__input" type="form" name="" value="Пароль"></input>
           </form>
+          <button class="header__button" type="button" name="button">Войти</button>
+          <ul class="header__user-nav user-nav">
+            <li class="user-nav__item"><a class="user-nav__link" href="#">Забыли пароль?</a></li>
+            <li class="user-nav__item"><a class="user-nav__link" href="#">Пароль</a></li>
+          </ul>
         </div>
-        <div class="header__basket basket">
-          <img class="basket__img" src="img/icons/basket.svg" alt="Basket" width="20" height="20"> <!-- Решил добавить img так как без картинки не понятно, что это корзина -->
-          <span class="basket__description">Пусто</span> <!-- Возможно, лучше будет поменять description на title -->
-          <div class="basket__popup-menu popup-menu"> <!-- popup-menu, везде одинаковый стиль серый фон и скругленные края   -->
-              <table class="basket__table"><!-- Здесь будет таблица заказов --></table>
-              <a class="basket__button button button" href="orders.html">Оформить заказ</a>
-          </div>
+        <div class="header__basket">
+          <a class="header__link" href="#">
+            <img class="header__img" src="http://placehold.it/25x25"> <!-- Решил добавить img так как без картинки не понятно, что это корзина -->
+            <span class="header__description">Пусто</span>
+            <div class="header__orders header__orders_hidden orders">
+              <table class="orders__form"><!-- Здесь будет таблица заказов --></table>
+              <button class="orders__button button" type="button" name="button"></button>
+            </div>
+          </a>
         </div>
 	    </nav>
       <section class="header__contacts contacts">
-        <h2 class="contacts__title contacts__title_hidden">Контактная информация</h2>
         <span class="contacts__work-time">c 10 до 20, ежедневно</span>
         <span class="contacts__phone">8 812 450-25-25</span>
       </section>
     </header>
-    <main class="container">
-      <h1 class="page__title">
-        Сливочное мороженое
-      </h1>
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="catalog.html">Каталог</a>
-        </li>
+    <main class="conteiner">
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="catalog.html">Каталог</a></li>
         <li class="breadcrumbs__item breadcrumbs__item_active">Сливочное</li>
       </ul>
-      <div class="filter">
-        <!-- Здесь будут фильтры с формами-->
+      <h1 class="breadcrumbs__title">
+        Сливочное мороженое
+      </h1>
+    </div>
+    <section class="filter">
+      <!-- Сдесь будуд фильтры с формами-->
+    </section>
+    <section class="catalog">
+      <ul class="catalog__list">
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">280р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочно-кофейное с кусочками шоколада</a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">680р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочное крем-брюле с карамельной подливкой</a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочное с брусничным джемом </a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочно-черничное с цельными ягодами черники </a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочно-лимонное с карамельной присыпкой</a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочное с шоколадной стружкой</a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочно-ванильное с кусочками шоколада </a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочноe с ментоловым сиропом</a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочное с кусочками черного шоколада</a></h3>
+        </li>
+        <li class="catalog__item">
+            <img src="http://placehold.it/100x100" alt="" class="catalog__img">
+            <b class="catalog__price">380р</b>
+            <h3 class="catalog__title"><a href="#" class="catalog__link">Сливочное с мятным сиропом</a></h3>
+        </li>
+      </ul>
+      <div class="catalog__pagination pagination">
+        <ul class="pagination__list">
+          <li class="pagination__item"><a href="#">1</a></li>
+          <li class="pagination__item pagination__item_current"><a>2</a></li>
+          <li class="pagination__item"><a href="#">3</a></li>
+          <li class="pagination__item"><a href="#">4</a></li>
+        </ul>
       </div>
-      <ul class="catalog">
-        <li class="catalog__item">
-            <img src="img/ice-cream/orange.jpg" alt="ice-cream_orange" class="catalog__img">
-            <b class="catalog__price">380р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            </h3>
-            <button  class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/coffe.jpg" alt="ice-cream_coffe" class="catalog__img">
-            <b class="catalog__price">280р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочно-кофейное с кусочками шоколада</a>
-            </h3>
-            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/strawberry.jpg" alt="ice-cream_strawberry" class="catalog__img">
-            <b class="catalog__price">680р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочно-клубничное с присыпкой из белого шоколада</a>
-            </h3>
-            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/Creme-brulee.jpg" alt="ice-cream_Creme-brulee" class="catalog__img">
-            <b class="catalog__price">380р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочное крем-брюле с карамельной подливкой</a>
-            </h3>
-            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/orange.jpg" alt="ice-cream_orange" class="catalog__img">
-            <b class="catalog__price">380р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            </h3>
-            <button  class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/coffe.jpg" alt="ice-cream_coffe" class="catalog__img">
-            <b class="catalog__price">280р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочно-кофейное с кусочками шоколада</a>
-            </h3>
-            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/strawberry.jpg" alt="ice-cream_strawberry" class="catalog__img">
-            <b class="catalog__price">680р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочно-клубничное с присыпкой из белого шоколада</a>
-            </h3>
-            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/Creme-brulee.jpg" alt="ice-cream_Creme-brulee" class="catalog__img">
-            <b class="catalog__price">380р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочное крем-брюле с карамельной подливкой</a>
-            </h3>
-            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/orange.jpg" alt="ice-cream_orange" class="catalog__img">
-            <b class="catalog__price">380р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            </h3>
-            <button  class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/coffe.jpg" alt="ice-cream_coffe" class="catalog__img">
-            <b class="catalog__price">280р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочно-кофейное с кусочками шоколада</a>
-            </h3>
-            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/strawberry.jpg" alt="ice-cream_strawberry" class="catalog__img">
-            <b class="catalog__price">680р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочно-клубничное с присыпкой из белого шоколада</a>
-            </h3>
-            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-        <li class="catalog__item">
-            <img src="img/ice-cream/Creme-brulee.jpg" alt="ice-cream_Creme-brulee" class="catalog__img">
-            <b class="catalog__price">380р</b>
-            <h3 class="catalog__title">
-              <a href="#" class="catalog__link">Сливочное крем-брюле с карамельной подливкой</a>
-            </h3>
-            <button class="catalog__button catalog__button_hidden button" type="button" name="button"></button>
-        </li>
-      </ul>
-      <ul class="catalog__pagination pagination">
-        <li class="pagination__item item item__previous">
-          <a class="pagination__link" href="#"></a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">1</a>
-        </li>
-        <li class="pagination__item pagination__item_current">
-          <a class="pagination__link" href="#">2</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">3</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">4</a>
-        </li>
-        <li class="pagination__item item item__next">
-          <a class="pagination__link" href="#"></a>
-        </li>
-      </ul>
+    </section>
     </main>
     <footer class="footer">
-      <ul class="footer__social social">
-        <li class="social__item">
-          <a class="social__button button" href="#">
-            <img src="img/icons/twitter.svg"   alt="twitter" class="social__img">
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__button button" href="#">
-            <img src="img/icons/instagram.svg" alt="instagram" width="100" height="50" class="social__img">
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__button button" href="#">
-            <img src="img/icons/facebook.svg" alt="facebook" width="100" height="50" class="social__img">
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__button button" href="#">
-            <img src="img/icons/vk.svg" alt="VK" width="100" height="50" class="social__img">
-          </a>
-        </li>
-      </ul>
-      <ul class="footer__information information">
-        <li class="information__item">
-          <a href="#" class="information__link">
-            <b class="information__important">Для поставщиков</b>
-          </a>
-        </li>
-        <li class="information__item">
-          <a href="#" class="information__link">Наши документы</a>
-        </li>
-        <li class="information__item">
-          <a href="#" class="information__link">О производстве</a>
-        </li>
-        <li class="information__item">
-          <a href="#" class="information__link">Экологические стандарты</a>
-        </li>
-      </ul>
-      <p class="footer__copyright copyright">
-        <b class="copyright_iportant">Сделано:</b> 
-        <a class="copyright__link" href="https://htmlacademy.ru">
-          <img class="copyright__img" src="img/icons/logo-htmlacademy" width="100" height="50" alt="HTML Academy">
-        </a>
+      <div class="footer__social social">
+        <ul class="social__list">
+          <li calss="social__item"><a class="social__button" href="#"><img src="http://placehold.it/70x70" alt="" class="social__img"></a></li>
+          <li calss="social__item"><a class="social__button" href="#"><img src="http://placehold.it/70x70" alt="" class="social__img"></a></li>
+          <li calss="social__item"><a class="social__button" href="#"><img src="http://placehold.it/70x70" alt="" class="social__img"></a></li>
+          <li calss="social__item"><a class="social__button" href="#"><img src="http://placehold.it/70x70" alt="" class="social__img"></a></li>
+        </ul>
+      </div>
+      <div class="footer__information information">
+        <ul class="information__list">
+          <li class="information__item">
+            <a href="#" class="information__link">
+              <b class="information__important">Для поставщиков</b>
+            </a>
+          </li>
+          <li class="information__item">
+            <a href="#" class="information__link">Наши документы</a>
+          </li>
+          <li class="information__item">
+            <a href="#" class="information__link">О производстве</a>
+          </li>
+          <li class="information__item">
+            <a href="#" class="information__link">Экологические стандарты</a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer-copyright">
+        <b>Сделано:</b> <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
       </p>
     </footer>
   </body>
