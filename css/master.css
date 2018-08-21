@@ -1,0 +1,14 @@
+/* .visibility-hidden{
+	display: none;
+} */
+
+body {
+	background-color: #849d8f;
+}
+
+.table__cell {
+	border: 1px solid #ffbca3;
+}
+.table__cell_sum {
+	text-align: right;
+}
