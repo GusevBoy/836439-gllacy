@@ -3,26 +3,27 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Глейси</title>
+		<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
 		<link rel="stylesheet" href="css/master.css">
 	</head>
 	<body>
 		<header class="header">
-			<a class="header__link link" href="index.html" aria-label="logotip">
+			<span class="header__logo-wrapper">
 				<img class="header__logo" src="img/icons/logo.svg" alt="Добро пожаловать в Gllacy Shop" width="100" height="50" >
-			</a>
+			</span>
 			<nav class="header__main-nav">
 				<!-- Навигация по сайту, блок расыыыполагается слева -->
-				<ul class="header__site-nav site-nav">
+				<ul class="header__site-nav site-nav"> <!-- Возможно надо удалить header__site-nav -->
 					<li class="site-nav__item site-nav__item_active">
-						<a class="site-nav__link link"  aria-label="Catalog">Каталог</a>
-						<ul class="site-nav__popup-menu popup-menu visibility-hidden"> <!-- Поменял на site-nav__popup-menu так как в выпадающем меню стиль текста отличается-->
+						<a class="site-nav__link link" aria-label="Catalog">Каталог</a>
+						<ul class="site-nav__popup-menu popup-menu hidden"> <!-- Поменял на site-nav__popup-menu так как в выпадающем меню стиль текста отличается-->
 							<li class="popup-menu__item">
 								<a class="popup-menu__link link" href="#" aria-label="novelties">
 									<strong>Новинки</strong>
 								</a>
 							</li>
 							<li class="popup-menu__item">
-								<a class="popup-menu__link link" href="milk.html" aria-label="milks">Сливочные</a>
+								<a class="popup-menu__link link" href="catalog.html" aria-label="milks">Сливочные</a>
 							</li>
 							<li class="popup-menu__item">
 								<a class="popup-menu__link link" href="#" aria-label="scrubbings">Щербеты</a>
@@ -47,9 +48,9 @@
 						<button class="user-nav__button user-nav__button_search">
 							<!-- Картинка добавляется через фон -->
 						</button>
-						<form class="user-nav__form form visibility-hidden" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
+						<form class="user-nav__form form hidden" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
 							<label class="form__label">
-								<span class="form__desc visibility-hidden">Search</span>
+								<span class="form__desc hidden">Search</span>
 								<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
 							</label>
 						</form>
@@ -59,16 +60,16 @@
 							<!-- Картинка добавляется через фон -->
 							<span class="user-nav__desc">Вход</span>
 						</button>
-						<form class="user-nav__form form visibility-hidden" action="https://echo.htmlacademy.ru" method="post">
+						<form class="user-nav__form form hidden" action="https://echo.htmlacademy.ru" method="post">
 							<label class="form__label">
-								<span class="form__desc visibility-hidden">Email</span>
+								<span class="form__desc hidden">Email</span>
 								<input class="form__input" type="email" name="email" placeholder="Электроная почта">
 							</label>
 							<label class="form__label">
-								<span class="form__desc visibility-hidden">Password</span>
+								<span class="form__desc hidden">Password</span>
 								<input class="form__input" type="password" name="password" placeholder="Пароль">
 							</label>
-							<button class="user-nav__button button" type="submit" name="button-login">Войти</button> <!--  Надо подумать над классами, как правильнее с точки зрения стилизации -->
+							<button class="user-nav__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
 							<ul class="user-nav__registration registration">
 								<li class="registration__item">
 									<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
@@ -84,7 +85,7 @@
 
 							<span class="user-nav__desc">Пусто</span>
 						</button>
-						<div class="user-nav__popup-menu popup-menu visibility-hidden"> <!-- popup-menu - везде одинаковый стиль серый фон и скругленные края   -->
+						<div class="user-nav__popup-menu popup-menu hidden"> <!-- popup-menu - везде одинаковый стиль серый фон и скругленные края   -->
 							<table class="user-nav__table table">
 								<tr class="table__row">
 									<td class="table__cell">
@@ -138,7 +139,7 @@
 				</ul>
 			</nav>
 			<section class="header__contacts contacts">
-				<h2 class="contacts__title visibility-hidden">Контактная информация</h2>
+				<h2 class="contacts__title hidden">Контактная информация</h2>
 				<span class="contacts__work-time">c 10 до 20, ежедневно</span>
 				<span class="contacts__phone">8 812 450-25-25</span>
 			</section>
@@ -146,8 +147,8 @@
 		<main class="container">
 			<div class="slider">
 				<img class="slider__img" src="img/content/ice-cream_1.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
-				<img class="slider__img visibility-hidden" src="img/content/ice-cream_2.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
-				<img class="slider__img visibility-hidden" src="img/content/ice-cream_3.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
+				<img class="slider__img hidden" src="img/content/ice-cream_2.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
+				<img class="slider__img hidden" src="img/content/ice-cream_3.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
 			</div>
 			<div class="news">
 				<section class="news__item theme theme_raspberry">
@@ -172,7 +173,7 @@
 					<h3 class="catalog__title">
 						<a href="#" class="catalog__link link" aria-label="ice-cream orange">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 					</h3>
-					<button class="catalog__button visibility-hidden button" type="button" name="button">Быстрый просмотр</button>
+					<button class="catalog__button hidden button" type="button" name="button">Быстрый просмотр</button>
 				</li>
 				<li class="catalog__item">
 					<img src="img/ice-cream/coffee.jpg" alt="Сливочно-кофейное мороженое" class="catalog__img" width="200" height="200">
@@ -181,7 +182,7 @@
 					<h3 class="catalog__title">
 						<a href="#" class="catalog__link link" aria-label="ice-cream coffe">Сливочно-кофейное с кусочками шоколада</a>
 					</h3>
-					<button class="catalog__button visibility-hidden button" type="button" name="button">Быстрый просмотр</button>
+					<button class="catalog__button hidden button" type="button" name="button">Быстрый просмотр</button>
 				</li>
 				<li class="catalog__item">
 					<img src="img/ice-cream/strawberry.jpg" alt="Сливочно-клубничное мороженое" class="catalog__img" width="200" height="200">
@@ -190,7 +191,7 @@
 					<h3 class="catalog__title">
 						<a href="#" class="catalog__link link" aria-label="ice-cream strawberry">Сливочно-клубничное с присыпкой из белого шоколада</a>
 					</h3>
-					<button class="catalog__button visibility-hidden button" type="button" name="button">Быстрый просмотр</button>
+					<button class="catalog__button hidden button" type="button" name="button">Быстрый просмотр</button>
 				</li>
 				<li class="catalog__item">
 					<img src="img/ice-cream/cream-brulee.jpg" alt="Мороженое сливочное крем-брюле" class="catalog__img" width="200" height="200">
@@ -199,7 +200,7 @@
 					<h3 class="catalog__title">
 						<a href="#" class="catalog__link link" aria-label="ice-cream cream-brulee">Сливочное крем-брюле с карамельной подливкой</a>
 					</h3>
-					<button class="catalog__button visibility-hidden button" type="button" name="button">Быстрый просмотр</button>
+					<button class="catalog__button hidden button" type="button" name="button">Быстрый просмотр</button>
 				</li>
 			</ul>
 			<section class="facts">
@@ -242,7 +243,7 @@
 			<div class="map">
 				<!--Сдесь будет карта -->
 				<section class="map__contacts contacts">
-					<h2 class="contacts__title visibility-hidden">Контактная информация</h2>
+					<h2 class="contacts__title hidden">Контактная информация</h2>
 					<span class="contacts__desc">Адрес главного офиса и офлайн-магазина:</span>
 					<span class="contacts__addres">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
 					<span class="contacts__desc">Для заказов по телефону</span>

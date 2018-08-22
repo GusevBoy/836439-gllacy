@@ -1,14 +1,235 @@
-/* .visibility-hidden{
-	display: none;
-} */
+@font-face {
+ font-family: "Roboto";
+ font-weight: 400;
+ src:
+	 url("fonts/web/roboto.woff2") format("woff2"),
+}
+@font-face {
+ font-family: "Roboto";
+ font-weight: 700;
+ src:
+	 url("fonts/web/robotobold.woff2") format("woff2"),
+}
+
+@font-face {
+ font-family: "Roboto";
+ font-weight: 500;
+ src:
+	 url("fonts/web/robotomedium.woff2") format("woff2"),
+}
+
+.hidden{
+	display: nonse;
+}
 
 body {
 	background-color: #849d8f;
+	color: #fff;
+	font-family: "Roboto", "Arial", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
 }
 
-.table__cell {
-	border: 1px solid #ffbca3;
+.popup-menu {
+	background-color: #f8f7f4;
+	border-radius: 10px;
 }
+
+.form__input {
+	border-color: #fff;
+	border: 1px solid #d3d3d2;
+	border-radius: 10px;
+}
+
+.link {
+	color: #fff;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 18px;
+}
+
+.link:hover {
+	color: #ffbc9e;
+}
+
+.form__input::placeholder {
+	color: #999999;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.button {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	background: linear-gradient(0deg,#f26843,#e74a35);
+}
+
+.site-nav {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 18px;
+	list-style: none;
+	padding-left: 0;
+}
+
+.site-nav__item {
+	display: inline-block;
+}
+
+.site-nav__link:hover {
+	color: #323232;
+	background-color: #fff;
+}
+
+.site-nav__link {
+	text-decoration: none;
+	color: #fff;
+}
+
+.site-nav__link_active {
+	background-color: #d07058;
+}
+
+.site-nav__link::after {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.2)
+}
+
+.site-nav__popup-menu {
+	position: absolute;
+	padding-left: 0;
+	list-style: none;
+}
+
+.popup-menu__item {
+	color: #323232;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16px;
+	list-style: none;
+}
+
+.popup-menu__item:hover {
+	background-color: #fbded8;
+}
+
+.popup-menu__link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.user-nav__button {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	background-color: rgba(255, 255, 255 , 0.2);
+	border: none;
+}
+
+.user-nav__button:hover {
+	color: #323232;
+	background-color: #f8f7f4;
+}
+
+.user-nav__button_search {
+	background-image: url(../img/icons/loupe.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+	width: 33px;
+	height: 33px;
+}
+
+.user-nav__button_search:hover {
+	background-image: url(../img/icons/loupe-black.svg);
+}
+
+.user-nav__button_basket {
+	background-image: url(../img/icons/basket-white.svg);
+	background-repeat: no-repeat;
+}
+
+.user-nav__button_basket:hover {
+	background-image: url(../img/icons/basket.svg);
+}
+
+.user-nav__button_login {
+	background-image: url(../img/icons/login-white.svg);
+	background-repeat: no-repeat;
+}
+
+.user-nav__button_login:hover {
+	background-image: url(../img/icons/login.svg);
+}
+
+.registration {
+	padding-left: 0;
+}
+
+.registration__item {
+	list-style: none;
+	padding-left: 0;
+}
+
+.registration__link {
+	color: #323232;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.table {
+	color: #323232;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.table__price {
+	color: #999999;
+}
+
+.table__button {
+	border: 0;
+}
+
 .table__cell_sum {
-	text-align: right;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+.contacts__work-time {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+.contacts__phone {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+.breadcrumbs__item {
+
+}
+
+.breadcrumbs__link {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.page__title {
+	font-size: 35px;
+	font-weight: 700;
+	line-height: 41px;
 }
