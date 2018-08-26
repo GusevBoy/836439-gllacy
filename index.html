@@ -149,6 +149,20 @@
 				<img class="slider__img" src="img/content/ice-cream_1.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
 				<img class="slider__img hidden" src="img/content/ice-cream_2.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
 				<img class="slider__img hidden" src="img/content/ice-cream_3.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
+				<div class="slider__radio">
+					<label class="slider__label">
+						<input class="slider__input" type="radio" name="slider">
+						<div class="slider__disc"></div>
+					</label>
+					<label class="slider__label">
+						<input class="slider__input" type="radio" name="slider">
+						<div class="slider__disc"></div>
+					</label>
+					<label class="slider__label">
+						<input class="slider__input" type="radio" name="slider">
+						<div class="slider__disc"></div>
+					</label>
+				</div>
 			</div>
 			<div class="news">
 				<section class="news__item theme theme_raspberry">
@@ -165,44 +179,52 @@
 					</p>
 				</section>
 			</div>
-			<ul class="catalog">
-				<li class="catalog__item">
-					<img src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом " class="catalog__img" width="200" height="200">
-					<span class="catalog__price">310</span>
-					<span class="catalog__weight">/кг</span> <!-- Рубль добавлен будет через фон -->
+			<li class="catalog__row">
+				<section class="catalog__item">
+					<img src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом " class="catalog__img" width="267" height="267">
+					<div class="catalog__price">
+						<span class="catalog__value">310</span>
+						<span class="catalog__weight">/кг</span> <!-- Рубль добавлен будет через фон -->
+					</div>
 					<h3 class="catalog__title">
 						<a href="#" class="catalog__link link" aria-label="ice-cream orange">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 					</h3>
-					<button class="catalog__button hidden button" type="button" name="button">Быстрый просмотр</button>
-				</li>
-				<li class="catalog__item">
-					<img src="img/ice-cream/coffee.jpg" alt="Сливочно-кофейное мороженое" class="catalog__img" width="200" height="200">
-					<span class="catalog__price">380</span>
-					<span class="catalog__weight">/кг</span>
+					<button class="catalog__button hidde button" type="button" name="button">Быстрый просмотр</button>
+				</section>
+				<section class="catalog__item">
+					<img src="img/ice-cream/coffee.jpg" alt="Сливочно-кофейное мороженое" class="catalog__img" width="267" height="267">
+					<div class="catalog__price">
+						<span class="catalog__value">380</span>
+						<span class="catalog__weight">/кг</span>
+					</div>
 					<h3 class="catalog__title">
 						<a href="#" class="catalog__link link" aria-label="ice-cream coffe">Сливочно-кофейное с кусочками шоколада</a>
 					</h3>
-					<button class="catalog__button hidden button" type="button" name="button">Быстрый просмотр</button>
-				</li>
-				<li class="catalog__item">
-					<img src="img/ice-cream/strawberry.jpg" alt="Сливочно-клубничное мороженое" class="catalog__img" width="200" height="200">
-					<span class="catalog__price">355</span>
-					<span class="catalog__weight">/кг</span>
+					<button class="catalog__button hidde button" type="button" name="button">Быстрый просмотр</button>
+				</section>
+				<section class="catalog__item">
+					<img src="img/ice-cream/strawberry.jpg" alt="Сливочно-клубничное мороженое" class="catalog__img" width="267" height="267">
+					<div class="catalog__price">
+						<span class="catalog__value">355</span>
+						<span class="catalog__weight">/кг</span>
+					</div>
 					<h3 class="catalog__title">
 						<a href="#" class="catalog__link link" aria-label="ice-cream strawberry">Сливочно-клубничное с присыпкой из белого шоколада</a>
 					</h3>
-					<button class="catalog__button hidden button" type="button" name="button">Быстрый просмотр</button>
-				</li>
-				<li class="catalog__item">
-					<img src="img/ice-cream/cream-brulee.jpg" alt="Мороженое сливочное крем-брюле" class="catalog__img" width="200" height="200">
-					<span class="catalog__price">415</span>
-					<span class="catalog__weight">/кг</span>
+					<button class="catalog__button hidde button" type="button" name="button">Быстрый просмотр</button>
+				</section>
+				<section class="catalog__item">
+					<img src="img/ice-cream/cream-brulee.jpg" alt="Мороженое сливочное крем-брюле" class="catalog__img" width="267" height="267">
+					<div class="catalog__price">
+						<span class="catalog__value">415</span>
+						<span class="catalog__weight">/кг</span>
+					</div>
 					<h3 class="catalog__title">
 						<a href="#" class="catalog__link link" aria-label="ice-cream cream-brulee">Сливочное крем-брюле с карамельной подливкой</a>
 					</h3>
-					<button class="catalog__button hidden button" type="button" name="button">Быстрый просмотр</button>
-				</li>
-			</ul>
+					<button class="catalog__button hidde button" type="button" name="button">Быстрый просмотр</button>
+				</section>
+			</li>
 			<section class="facts">
 				<h2 class="facts__title title">
 					Магазин Глэйси — это онлайн- и офлайн-магазин
@@ -257,46 +279,50 @@
 			<ul class="footer__social social">
 				<li class="social__item">
 					<a class="social__link" aria-label="twitter" href="#">
-						<img src="img/icons/twitter.svg" alt="Читайте о мороженом в твитере" class="social__img">
+						<img class="social__img" src="img/icons/twitter.svg" alt="Читайте о мороженом в твитере" width="33" height="33" class="social__img">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="instagram" href="#">
-						<img src="img/icons/instagram.svg" alt="Подпишитесь на нас в instagram" width="100" height="50" class="social__img">
+						<img class="social__img" src="img/icons/instagram.svg" alt="Подпишитесь на нас в instagram" width="33" height="33" class="social__img">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="facebook" href="#">
-						<img src="img/icons/fb.svg" alt="Следите за нами в facebook" width="100" height="50" class="social__img">
+						<img class="social__img" src="img/icons/fb.svg" alt="Следите за нами в facebook" width="33" height="33" class="social__img">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="vkontakte" href="#">
-						<img src="img/icons/vk.svg" alt="Следите за нами в вконтакте" width="100" height="50" class="social__img">
+						<img class="social__img" src="img/icons/vk.svg" alt="Следите за нами в вконтакте" width="33" height="33" class="social__img">
 					</a>
 				</li>
 			</ul>
 			<ul class="footer__information information">
-				<li class="information__item">
-					<a href="#" class="information__link link" aria-label="about-me">
-						<stong class="information__important">Для поставщиков</strong>
-					</a>
-				</li>
-				<li class="information__item">
-					<a href="#" class="information__link link" aria-label="documents">Наши документы</a>
-				</li>
-				<li class="information__item">
-					<a href="#" class="information__link link" aria-label="production">О производстве</a>
-				</li>
-				<li class="information__item">
-					<a href="#" class="information__link link">Экологические стандарты</a>
-				</li>
+				<div class="information__row">
+					<div class="information__item">
+						<a href="#" class="information__link link" aria-label="about-me">
+							<stong>Для поставщиков</strong>
+						</a>
+					</div>
+					<div class="information__item">
+						<a href="#" class="information__link link" aria-label="production">О производстве</a>
+					</div>
+				</div>
+				<div class="information__row">
+					<div class="information__item">
+						<a href="#" class="information__link link" aria-label="documents">Наши документы</a>
+					</div>
+					<div class="information__item">
+						<a href="#" class="information__link link">Экологические стандарты</a>
+					</div>
+				</div>
 			</ul>
 			<p class="footer__copyright copyright">
-				<strong class="copyright__iportant">Сделано:</strong> <!-- Хочу не только через тэг b показать значимость, но еще хочу придумать класс, пока обозвал important -->
 				<a class="copyright__link link" href="https://htmlacademy.ru" aria-label="htmlacademy">
-					<img class="copyright__img" src="img/icons/logo-htmlacademy" width="100" height="50" alt="Добро пожаловать в HTML Academy">
+					<img class="copyright__img" src="img/icons/logo-htmlacademy.svg" width="110" height="40" alt="Добро пожаловать в HTML Academy">
 				</a>
+				<strong class="copyright__iportant">Сделано:</strong>
 			</p>
 		</footer>
 	</body>
