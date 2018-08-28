@@ -621,7 +621,6 @@ body {
 .catalog__item {
 	position: relative;
 	width: 293px;
-	padding: 0 13px;
 }
 
 .catalog__item:hover {
@@ -808,6 +807,27 @@ body {
 
 .information__row:last-child {
 	margin-right: 0;
+}
+
+.footer__copyright {
+
+}
+
+.copyright__link,
+.copyright__desc {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.copyright__desc,
+.copyright__link_htmlacademy {
+	font-size: 12px;
+  line-height: 16px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fefefe;
+	margin: 0;
+	text-decoration: none;
 }
 
 /*----------------------------------*/
