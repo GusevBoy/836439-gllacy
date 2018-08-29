@@ -249,18 +249,22 @@
 					</li>
 				</ul>
 			</section>
-			<article class="recipes">
-				<p class="recipes__desc">Новое в нашем блоге</p>
-				<h4 class="recipes__title">10 способов сервировки фруктовых щербетов к столу</h4>
-			</article>
-			<div class="subscribe">
-				<p class="subscribe__desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе все новости</p>
-				<form class="subscribe__form form" action="https://echo.htmlacademy.ru" method="post">
-					<label class="form__label">
-						<input class="subscribe__input" type="email" name="subscribe-email" placeholder="Электроная почта">
-					</label>
-					<button class="subscribe__button button" type="submit" name="button-send">Отправить</button>
-				</form>
+			<div class="flex__container">
+				<article class="recipes">
+					<p class="recipes__desc">Новое в нашем блоге</p>
+					<h4 class="recipes__title">
+						<a class="recipes__link link">10 способов сервировки фруктовых щербетов к столу</link>
+					</h4>
+				</article>
+				<div class="subscribe">
+					<p class="subscribe__desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+					<form class="subscribe__form form" action="https://echo.htmlacademy.ru" method="post">
+						<label class="form__label">
+							<input class="subscribe__input" type="email" name="subscribe-email" placeholder="Электроная почта">
+						</label>
+						<button class="subscribe__button button" type="submit" name="button-send">Отправить</button>
+					</form>
+				</div>
 			</div>
 			<div class="map">
 				<!--Сдесь будет карта -->
@@ -279,22 +283,22 @@
 			<ul class="footer__social social">
 				<li class="social__item">
 					<a class="social__link" aria-label="twitter" href="#">
-						<img class="social__img" src="img/icons/twitter.svg" alt="Читайте о мороженом в твитере" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/media/twitter.svg" alt="Читайте о мороженом в твитере" width="33" height="33" class="social__img">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="instagram" href="#">
-						<img class="social__img" src="img/icons/instagram.svg" alt="Подпишитесь на нас в instagram" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/media/instagram.svg" alt="Подпишитесь на нас в instagram" width="33" height="33" class="social__img">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="facebook" href="#">
-						<img class="social__img" src="img/icons/fb.svg" alt="Следите за нами в facebook" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/media/fb.svg" alt="Следите за нами в facebook" width="33" height="33" class="social__img">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="vkontakte" href="#">
-						<img class="social__img" src="img/icons/vk.svg" alt="Следите за нами в вконтакте" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/media/vk.svg" alt="Следите за нами в вконтакте" width="33" height="33" class="social__img">
 					</a>
 				</li>
 			</ul>
@@ -318,12 +322,16 @@
 					</div>
 				</div>
 			</ul>
-			<p class="footer__copyright copyright">
+			<div class="footer__copyright copyright">
 				<a class="copyright__link link" href="https://htmlacademy.ru" aria-label="htmlacademy">
 					<img class="copyright__img" src="img/icons/logo-htmlacademy.svg" width="110" height="40" alt="Добро пожаловать в HTML Academy">
 				</a>
-				<strong class="copyright__iportant">Сделано:</strong>
-			</p>
+				<p class="copyright__desc">
+					Сделано в
+					<!-- Правильно ли я добавил модификатор ? -->
+					<a class="copyright__link_htmlacademy" href="https://htmlacademy.ru">HTML Academy</a> © 2017
+				</p>
+			</div>
 		</footer>
 	</body>
 </html>
