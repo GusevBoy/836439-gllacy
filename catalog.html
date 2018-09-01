@@ -12,11 +12,11 @@
 				<img class="header__logo" src="img/icons/logo.svg" alt="Добро пожаловать в Gllacy Shop" width="154" height="64" >
 			</a>
 			<nav class="header__main-nav">
-				<!-- Навигация по сайту, блок расыыыполагается слева -->
 				<ul class="header__site-nav site-nav">
-					<li class="site-nav__item site-nav__item">
+					<li class="site-nav__item site-nav__item-catalog">
 						<span class="site-nav__link site-nav__link_active">Каталог</span>
-						<ul class="site-nav__popup-menu popup-menu hidden"> <!-- Поменял на site-nav__popup-menu так как в выпадающем меню стиль текста отличается-->
+						<!-- Приходится быстро на popup  переключатся ) -->
+						<ul class="site-nav__popup-menu popup-menu">
 							<li class="popup-menu__item">
 								<a class="popup-menu__link" href="#" aria-label="novelties">
 									<strong>Новинки</strong>
@@ -29,7 +29,7 @@
 								<a class="popup-menu__link" href="#" aria-label="scrubbings">Щербеты</a>
 							</li>
 							<li class="popup-menu__item">
-								<a class="popup-menu__link" href="#" aria-label="fruit-ice">Фруктовый лед</a>
+								<a class="popup-menu__link" href="#" aria-label="fruit-ice">Фруктовый&nbsp;лед</a>
 							</li>
 							<li class="popup-menu__item">
 								<a class="popup-menu__link" href="#" aria-label="melorin">Мелорин</a>
@@ -46,12 +46,12 @@
 				<ul class="header__user-nav user-nav">
 					<li class="user-nav__item">
 						<button class="user-nav__button user-nav__button_search">
-							<!-- Картинка добавляется через фон -->
+							<!-- Картинка добавляется через фон, возможно стоит через img -->
 						</button>
-						<form class="user-nav__form form hidden" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
+						<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
 							<label class="form__label">
 								<span class="form__desc hidden">Search</span>
-								<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
+									<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
 							</label>
 						</form>
 					</li>
@@ -60,25 +60,27 @@
 							<!-- Картинка добавляется через фон -->
 							<span class="user-nav__desc">Вход</span>
 						</button>
-						<form class="user-nav__form form hidden" action="https://echo.htmlacademy.ru" method="post">
-							<label class="form__label">
-								<span class="form__desc hidden">Email</span>
-								<input class="form__input" type="email" name="email" placeholder="Электроная почта">
-							</label>
-							<label class="form__label">
-								<span class="form__desc hidden">Password</span>
-								<input class="form__input" type="password" name="password" placeholder="Пароль">
-							</label>
-							<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
-							<ul class="user-nav__registration registration">
-								<li class="registration__item">
-									<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
-								</li>
-								<li class="registration__item">
-									<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
-								</li>
-							</ul>
-						</form>
+						<div class="user-nav__container">
+							<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="post">
+								<label class="form__label">
+									<span class="form__desc hidden">Email</span>
+									<input class="form__input" type="email" name="email" placeholder="Электроная почта">
+								</label>
+								<label class="form__label">
+									<span class="form__desc hidden">Password</span>
+									<input class="form__input" type="password" name="password" placeholder="Пароль">
+								</label>
+								<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
+								<ul class="user-nav__registration registration">
+									<li class="registration__item">
+										<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
+									</li>
+									<li class="registration__item">
+										<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
+									</li>
+								</ul>
+							</form>
+						</div>
 					</li>
 					<li class="user-nav__item">
 						<button class="user-nav__button user-nav__button_basket">

@@ -35,13 +35,17 @@ body {
 
 .popup-menu {
 	background-color: #f8f7f4;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .form__input {
-	border-color: #fff;
+	box-sizing: border-box;
+	width: 100%;
+	display: block;
+	background-color: #ffffff;
 	border: 1px solid #d3d3d2;
-	border-radius: 10px;
+	border-radius: 5px;
+	padding: 15px;
 }
 
 .form__input::placeholder {
@@ -96,6 +100,60 @@ body {
 	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
+.container {
+	padding: 0 20px;
+}
+
+.contacts {
+	color: #323232;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+}
+
+.contacts__desc-addres,
+.contacts__desc-phone {
+	display: block;
+  font-size: 14px;
+  line-height: 20px;
+	margin-bottom: 9px;
+}
+
+.contacts__desc-phone {
+	margin-bottom: 12px;
+}
+
+.contacts__addres {
+	display: block;
+	font-size: 18px;
+  font-weight: 700;
+	margin-bottom: 23px;
+}
+
+.contacts__button {
+	display: block;
+	margin-top: 30px;
+	margin: 0 auto;
+	width: 252px;
+	height: 44px;
+}
+
+.contacts__work-time {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+.contacts__phone {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+.header__logo {
+	margin-right: 10px;
+}
+
 .header {
 	display: flex;
 	padding: 0 20px;
@@ -107,42 +165,43 @@ body {
 .header__main-nav {
 	display: flex;
 	justify-content: space-between;
+	align-items: middle;
 	width: 100%;
-	margin: 0 10px;
 }
 
 .site-nav {
+	display: flex;
+	align-items: center;
+	margin: 0;
 	color: #fff;
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 18px;
 	list-style: none;
 	padding-left: 0;
+
 }
 
-.site-nav__item {
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.site-nav__item:last-child {
-	display: inline-block;
-	margin-left: 10px;
-	margin-right: 0;
-}
-
-.site-nav__link:hover {
-	/* color: #323232;
-	background-color: #fff;
-	padding: 7px 14px;
-	border-radius: 50px; */
-}
-
+/*Решил не задавать логотипу margin-right: 24px; а задать всего 10px,
+остальные 10px я задаю в качестве паддингов у site-nav__link, это позволяет нам спокойно навешевать класс site-nav__link_active
+и при этом активный элемент не влияет на окружающие элементы, для примера попробуй поиграться с site-nav__link_active, повесить на другой элемент*/
 .site-nav__link {
 	display: block;
 	text-decoration: none;
 	color: #fff;
 	text-align: center;
+	padding: 7px 14px;
+	font-size: 16px;
+	line-height: 18px;
+  text-align: left;
+  color: #ffffff;
+}
+/*Как быть с HOVER, если естьб активный блок, то смотрится не очень, приходится доп отступы делать у активного*/
+.site-nav__link:hover {
+	color: #323232;
+	background-color: #fff;
+	padding: 7px 14px;
+	border-radius: 50px;
 }
 
 .site-nav__link::after {
@@ -155,7 +214,7 @@ body {
 
 .site-nav__link_active {
 	background-color: #d07058;
-	padding: 7px 14px;
+
 	border-radius: 50px;
 }
 
@@ -173,10 +232,28 @@ body {
 	border-radius: 50px;
 }
 
+.site-nav__item-catalog {
+	position: relative;
+}
+
+.site-nav__item-catalog:hover .site-nav__popup-menu {
+	display: block;
+}
+
 .site-nav__popup-menu {
 	position: absolute;
 	padding-left: 0;
 	list-style: none;
+	left: -7px;
+	top: 38px;
+	z-index: 1; /*Элементы rage стоят выше по этому поставил данное свойство*/
+	display: none;
+}
+
+.popup-menu {
+	background-color: #f8f7f4;
+	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+	overflow: hidden;
 }
 
 .popup-menu__item {
@@ -187,7 +264,24 @@ body {
 	list-style: none;
 }
 
+.popup-menu__link {
+	display: block;
+	padding: 12px 20px;
+}
+
+.popup-menu__item:first-child::after {
+	content: '';
+	display: block;
+	border-bottom: 1px solid #D2D1CF;
+	margin-left: 6px;
+	margin-right: 9px;
+}
+
 .popup-menu__item:hover {
+	background-color: #fbded8;
+}
+
+.popup-menu__item:first-child:hover {
 	background-color: #fbded8;
 }
 
@@ -198,12 +292,13 @@ body {
 
 .user-nav {
 	display: flex;
+	align-items: center;
 	list-style: none;
-	padding: 0 10px;
 	margin-left: auto;
 }
 
 .user-nav__item {
+	position: relative;
 	margin-right: 11px;
 }
 .user-nav__item:last-child {
@@ -250,6 +345,38 @@ body {
 	background-image: url(../img/icons/loupe-black.svg);
 }
 
+.user-nav__container::before {
+	position: absolute;
+	left: 0;
+ right: 0;
+ bottom: 100%;
+ display: block;
+ height: 18px;
+ content: '';
+
+}
+
+.user-nav__form {
+	display: none;
+	box-sizing: border-box;
+	z-index: 1; /*Что бы контакты перекрыл*/
+	position: absolute;
+	right: 1px;
+	top: 37px;
+	padding: 20px 15px;
+	width: 341px;
+}
+
+.user-nav__button_search:hover+.user-nav__form {
+	display: block;
+}
+
+.form {
+	background-color: #f8f7f4;
+	border-radius: 5px;
+	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
 .user-nav__button_basket {
 	background-image: url(../img/icons/basket-white.svg);
 	background-repeat: no-repeat;
@@ -259,6 +386,10 @@ body {
 
 .user-nav__button_basket:hover {
 	background-image: url(../img/icons/basket.svg);
+}
+
+.user-nav__button_search:hover+.user-nav__form {
+	display: block;
 }
 
 .registration {
@@ -298,22 +429,15 @@ body {
 	line-height: 18px;
 }
 
+.header{
+	margin-top: 9px;
+}
+
 .header__contacts {
+	color: #fff;
 	position: absolute;
 	right: 27px;
 	top: 75px;
-}
-
-.contacts__work-time {
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 16px;
-}
-
-.contacts__phone {
-	font-size: 22px;
-	font-weight: 700;
-	line-height: 24px;
 }
 
 .breadcrumbs {
@@ -323,9 +447,7 @@ body {
 	font-size: 0;
 }
 
-.container {
-	padding: 0 20px;
-}
+
 
 .breadcrumbs__item {
 	display: flex;
@@ -832,11 +954,6 @@ body {
 
 /*----------------------------------*/
 /*Catalog*/
-
-.container {
-	padding: 0 20px;
-}
-
 .slider {
 
 }
@@ -1077,4 +1194,20 @@ body {
 .subscribe__button {
 	width: 129px;
 	height: 44px;
+}
+
+.map {
+	width: 1200px;
+	position: relative;
+	right: 20px; /*Мне кажется это костыль, но как сделать, что бы несмотря на padding container был1200px ?*/
+}
+
+.map__contacts {
+	box-sizing: border-box;
+	position: absolute;
+	width: 302px;
+	height: 305px;
+	padding: 32px 55px 32px 25px;
+	background-color: #fff;
+	border-radius: 10px;
 }
