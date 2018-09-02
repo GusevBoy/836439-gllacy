@@ -13,9 +13,11 @@
 			</a>
 			<nav class="header__main-nav">
 				<ul class="header__site-nav site-nav">
-					<li class="site-nav__item">
-						<span class="site-nav__link">Каталог</span>
-						<ul class="site-nav__popup-menu popup-menu hidden">
+					<li class="site-nav__item site-nav__item-catalog">
+						<span class="site-nav__link site-nav__link_active">Каталог</span>
+						<!-- Приходится быстро на popup  переключатся ) -->
+						<div class="site-nav__container">
+							<ul class="site-nav__popup-menu popup-menu">
 							<li class="popup-menu__item">
 								<a class="popup-menu__link" href="#" aria-label="novelties">
 									<strong>Новинки</strong>
@@ -28,12 +30,13 @@
 								<a class="popup-menu__link" href="#" aria-label="scrubbings">Щербеты</a>
 							</li>
 							<li class="popup-menu__item">
-								<a class="popup-menu__link" href="#" aria-label="fruit-ice">Фруктовый лед</a>
+								<a class="popup-menu__link" href="#" aria-label="fruit-ice">Фруктовый&nbsp;лед</a>
 							</li>
 							<li class="popup-menu__item">
 								<a class="popup-menu__link" href="#" aria-label="melorin">Мелорин</a>
 							</li>
 						</ul>
+						</div>
 					</li>
 					<li class="site-nav__item">
 						<a class="site-nav__link" href="#" aria-label="payment-info">Доставка и оплата</a>
@@ -45,39 +48,47 @@
 				<ul class="header__user-nav user-nav">
 					<li class="user-nav__item">
 						<button class="user-nav__button user-nav__button_search">
-							<!-- Картинка добавляется через фон -->
+							<!-- Картинка добавляется через фон, возможно стоит через img -->
 						</button>
-						<form class="user-nav__form form hidden" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
+						<div class="user-nav__container">
+							<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
 							<label class="form__label">
 								<span class="form__desc hidden">Search</span>
-								<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
+									<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
 							</label>
 						</form>
+						</div>
 					</li>
 					<li class="user-nav__item">
 						<button class="user-nav__button user-nav__button_login">
 							<!-- Картинка добавляется через фон -->
 							<span class="user-nav__desc">Вход</span>
 						</button>
-						<form class="user-nav__form form hidden" action="https://echo.htmlacademy.ru" method="post">
-							<label class="form__label">
-								<span class="form__desc hidden">Email</span>
-								<input class="form__input" type="email" name="email" placeholder="Электроная почта">
-							</label>
-							<label class="form__label">
-								<span class="form__desc hidden">Password</span>
-								<input class="form__input" type="password" name="password" placeholder="Пароль">
-							</label>
-							<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
-							<ul class="user-nav__registration registration">
-								<li class="registration__item">
-									<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
-								</li>
-								<li class="registration__item">
-									<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
-								</li>
-							</ul>
-						</form>
+						<!-- Коонтейнер специально для псевдоэлемента, что бы не большая прослойка была -->
+						<div class="user-nav__container">
+							<!-- Можно ли так? Сдела специально так как ширина отличается -->
+							<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
+								<label class="form__label">
+									<span class="form__desc hidden">Email</span>
+									<input class="form__input" type="email" name="email" placeholder="Электроная почта">
+								</label>
+								<label class="form__label">
+									<span class="form__desc hidden">Password</span>
+									<input class="form__input" type="password" name="password" placeholder="Пароль">
+								</label>
+								<div class="flex__container">
+									<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
+									<ul class="user-nav__registration registration">
+										<li class="registration__item">
+											<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
+										</li>
+										<li class="registration__item">
+											<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
+										</li>
+									</ul>
+								</div>
+							</form>
+						</div>
 					</li>
 					<li class="user-nav__item">
 						<button class="user-nav__button user-nav__button_basket">

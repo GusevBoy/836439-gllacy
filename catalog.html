@@ -13,17 +13,18 @@
 			</a>
 			<nav class="header__main-nav">
 				<ul class="header__site-nav site-nav">
-					<li class="site-nav__item site-nav__item-catalog">
+					<li class="site-nav__item site-nav__item-goods">
 						<span class="site-nav__link site-nav__link_active">Каталог</span>
 						<!-- Приходится быстро на popup  переключатся ) -->
-						<ul class="site-nav__popup-menu popup-menu">
+						<div class="site-nav__container">
+							<ul class="site-nav__popup-menu popup-menu">
 							<li class="popup-menu__item">
 								<a class="popup-menu__link" href="#" aria-label="novelties">
 									<strong>Новинки</strong>
 								</a>
 							</li>
 							<li class="popup-menu__item">
-								<a class="popup-menu__link" aria-label="milks">Сливочные</a>
+								<a class="popup-menu__link popup-menu__link_active" aria-label="milks">Сливочные</a>
 							</li>
 							<li class="popup-menu__item">
 								<a class="popup-menu__link" href="#" aria-label="scrubbings">Щербеты</a>
@@ -35,6 +36,7 @@
 								<a class="popup-menu__link" href="#" aria-label="melorin">Мелорин</a>
 							</li>
 						</ul>
+						</div>
 					</li>
 					<li class="site-nav__item">
 						<a class="site-nav__link" href="#" aria-label="payment-info">Доставка и оплата</a>
@@ -48,20 +50,24 @@
 						<button class="user-nav__button user-nav__button_search">
 							<!-- Картинка добавляется через фон, возможно стоит через img -->
 						</button>
-						<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
+						<div class="user-nav__container">
+							<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
 							<label class="form__label">
 								<span class="form__desc hidden">Search</span>
 									<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
 							</label>
 						</form>
+						</div>
 					</li>
 					<li class="user-nav__item">
 						<button class="user-nav__button user-nav__button_login">
 							<!-- Картинка добавляется через фон -->
 							<span class="user-nav__desc">Вход</span>
 						</button>
+						<!-- Коонтейнер специально для псевдоэлемента, что бы не большая прослойка была -->
 						<div class="user-nav__container">
-							<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="post">
+							<!-- Можно ли так? Сдела специально так как ширина отличается -->
+							<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
 								<label class="form__label">
 									<span class="form__desc hidden">Email</span>
 									<input class="form__input" type="email" name="email" placeholder="Электроная почта">
@@ -70,72 +76,75 @@
 									<span class="form__desc hidden">Password</span>
 									<input class="form__input" type="password" name="password" placeholder="Пароль">
 								</label>
-								<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
-								<ul class="user-nav__registration registration">
-									<li class="registration__item">
-										<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
-									</li>
-									<li class="registration__item">
-										<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
-									</li>
-								</ul>
+								<div class="flex__container">
+									<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
+									<ul class="user-nav__registration registration">
+										<li class="registration__item">
+											<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
+										</li>
+										<li class="registration__item">
+											<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
+										</li>
+									</ul>
+								</div>
 							</form>
 						</div>
 					</li>
 					<li class="user-nav__item">
-						<button class="user-nav__button user-nav__button_basket">
-
-							<span class="user-nav__desc">Пусто</span>
+						<button class="user-nav__button user-nav__button_active user-nav__button_basket-red">
+							<span class="user-nav__desc">2 товара</span>
 						</button>
-						<div class="user-nav__popup-menu popup-menu hidden"> <!-- popup-menu - везде одинаковый стиль серый фон и скругленные края   -->
-							<table class="user-nav__table table">
-								<tr class="table__row">
-									<td class="table__cell">
-										<button class="table__button" type="" name="button">
-											<img class="table__img" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
-										</button>
-									</td>
-									<td class="table__cell">
-										<img class="table__img icon icon__ice-cream" src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом" width="20" height="20">
-									</td>
-									<td class="table__cell">
-										<span class="table__name">Пломбир с апельсиновым джемом</span>
-									</td>
-									<td class="table__cell">
-										<span class="table__weight">1.5кг</span> <!-- Крестик будет добавлен через фон -->
-										<span class="table__price">200руб</span>
-									</td>
-									<td class="table__cell">
-										<span class="table__total-price">300руб</span>
-									</td>
-								</tr>
-								<tr class="table__row">
-									<td class="table__cell">
-										<button class="table__button" type="" name="button">
-											<img class="table__img" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
-										</button>
-									</td>
-									<td class="table__cell">
-										<img class="table__img icon icon__ice-cream" src="img/ice-cream/strawberry.jpg" alt="Сливочно-кофейное мороженое" width="20" height="20">
-									</td>
-									<td class="table__cell">
-										<span class="table__name">Клубничный пломбир с присыпкой из белого шоколада</span>
-									</td>
-									<td class="table__cell">
-										<span class="table__weight">1,5кг</span> <!-- Крестик будет добавлен через фон -->
-										<span class="table__price">300руб</span>
-									</td>
-									<td class="table__cell">
-										<span class="table__total-price">450руб</span>
-									</td>
-								</tr>
-								<tr class="table__row">
-									<td class="table__cell table__cell_sum" colspan="5">
-										Итого: 750руб
-									</td>
-								</tr>
-							</table>
-							<a class="user-nav__link button" href="orders.html" aria-label="checkout">Оформить заказ</a>
+						<div class="user-nav__container">
+							<div class="user-nav__popup-menu popup-menu"> <!-- popup-menu - везде одинаковый стиль серый фон и скругленные края   -->
+								<table class="user-nav__table table">
+									<tr class="table__row">
+										<td class="table__cell">
+											<button class="table__button" type="submit" name="button">
+												<img class="table__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
+											</button>
+										</td>
+										<td class="table__cell">
+											<img class="table__img icon icon__ice-cream" src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом" width="20" height="20">
+										</td>
+										<td class="table__cell">
+											<span class="table__name">Пломбир с апельсиновым джемом</span>
+										</td>
+										<td class="table__cell">
+											<span class="table__weight">1.5кг x</span> <!-- Крестик будет добавлен через фон -->
+											<span class="table__price">200руб</span>
+										</td>
+										<td class="table__cell">
+											<span class="table__total-price">300руб</span>
+										</td>
+									</tr>
+									<tr class="table__row">
+										<td class="table__cell">
+											<button class="table__button" type="submit" name="button">
+												<img class="table__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
+											</button>
+										</td>
+										<td class="table__cell">
+											<img class="table__img icon icon__ice-cream" src="img/ice-cream/strawberry.jpg" alt="Сливочно-кофейное мороженое" width="20" height="20">
+										</td>
+										<td class="table__cell">
+											<span class="table__name">Клубничный пломбир с присыпкой из белого шоколада</span>
+										</td>
+										<td class="table__cell">
+											<span class="table__weight">1,5кг x</span> <!-- Крестик будет добавлен через фон -->
+											<span class="table__price">300руб</span>
+										</td>
+										<td class="table__cell">
+											<span class="table__total-price">450руб</span>
+										</td>
+									</tr>
+									<tr class="table__row">
+										<td class="table__cell table__cell-sum" colspan="5">
+											Итого: 750руб
+										</td>
+									</tr>
+								</table>
+								<a class="user-nav__link button" href="orders.html" aria-label="checkout">Оформить заказ</a>
+							</div>
 						</div>
 					</li>
 				</ul>
@@ -152,7 +161,7 @@
 					<a class="breadcrumbs__link link" href="index.html" aria-label="Главная страница">Главная</a>
 				</li>
 				<li class="breadcrumbs__item">
-					<a class="breadcrumbs__link link" href="catalog.html">Каталог</a>
+					<a class="breadcrumbs__link link" href="goods.html">Каталог</a>
 				</li>
 				<li class="breadcrumbs__item
 				breadcrumbs__item_active">Сливочное</li>
@@ -182,8 +191,8 @@
 					<div class="filter__range range">
 						<div class="range__line">
 							<div class="range__layer">
-								<div class="range__circle-first"></div>
-								<div class="range__circle-last"></div>
+								<div class="range__circle"></div>
+								<div class="range__circle"></div>
 							</div>
 						</div>
 					</div>
@@ -245,172 +254,190 @@
 					</div>
 				</fieldset>
 			</form>
-			<ul class="catalog">
-				<li class="catalog__row">
-					<section class="catalog__item">
-						<img src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом " class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">310</span>
-							<span class="catalog__weight">/кг</span> <!-- Рубль добавлен будет через фон -->
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream orange">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-					<section class="catalog__item">
-						<img src="img/ice-cream/coffee.jpg" alt="Сливочно-кофейное мороженое" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">380</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream coffe">Сливочно-кофейное с кусочками шоколада</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-					<section class="catalog__item">
-						<img src="img/ice-cream/strawberry.jpg" alt="Сливочно-клубничное мороженое" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">355</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream strawberry">Сливочно-клубничное с присыпкой из белого шоколада</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-					<section class="catalog__item">
-						<img src="img/ice-cream/cream-brulee.jpg" alt="Мороженое сливочное крем-брюле" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">415</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream cream-brulee">Сливочное крем-брюле с карамельной подливкой</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-				</li>
-				<li class="catalog__row">
-					<section class="catalog__item">
-						<img src="img/ice-cream/cowberry.jpg" alt="Сливочное с брусничным джемом" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">325</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream cowberry">Сливочное с брусничным джемом</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-					<section class="catalog__item">
-						<img src="img/ice-cream/bilberry.jpg" alt="" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">410</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream bilberry">Сливочно-черничное с цельными ягодами черники</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-					<section class="catalog__item">
-						<img src="img/ice-cream/cream-lemon.jpg" alt="Сливочно-лимонное мороженое" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">375</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream cream-lemon">Сливочно-лимонное с карамельной присыпкой</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-					<section class="catalog__item">
-						<img src="img/ice-cream/chocolate-chip.jpg" alt="Сливочное мороженое с шоколадной стружкой" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">320</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream chocolate-chip">Сливочное с шоколадной стружкой</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-				</li>
-				<li class="catalog__row">
-					<section class="catalog__item">
-						<img src="img/ice-cream/cream-chocolate.jpg" alt="Сливочно-ванильное мороженое" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">440</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream cream-chocolate">Сливочно-ванильное с кусочками шоколада</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-					<section class="catalog__item">
-						<img src="img/ice-cream/menthol.jpg" alt="" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">435</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream menthol">Сливочноe с ментоловым сиропом</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-					<section class="catalog__item">
-						<img src="img/ice-cream/dark-chocolate.jpg" alt="Мороженое с кусочками черного шоколада" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">355</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream dark-chocolate">Сливочное с кусочками черного шоколада</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-					<section class="catalog__item">
-						<img src="img/ice-cream/mint.jpg" alt="Мятной мороженое" class="catalog__img" width="267" height="267">
-						<div class="catalog__price">
-							<span class="catalog__value">420</span>
-							<span class="catalog__weight">/кг</span>
-						</div>
-						<h3 class="catalog__title">
-							<a href="#" class="catalog__link link" aria-label="ice-cream mint">Сливочное с мятным сиропом</a>
-						</h3>
-						<button class="catalog__button button" type="button" name="button">
-							<span class="button__text">Быстрый просмотр</span>
-						</button>
-					</section>
-				</li>
-				<ul class="catalog__pagination pagination">
-					<li class="pagination__item item item__previous">
-						<a class="pagination__link link" href="#" aria-label="previous">
+			<div class="goods">
+				<article class="goods__item">
+					<img src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом " class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">310</span>
+						<span class="goods__weight">/кг</span> <!-- Рубль добавлен будет через фон -->
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream orange">
+							<span class="goods__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/coffee.jpg" alt="Сливочно-кофейное мороженое" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">380</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream coffe">
+							<span class="goods__text">Сливочно-кофейное с кусочками шоколада</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/strawberry.jpg" alt="Сливочно-клубничное мороженое" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">355</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream strawberry">
+							<span class="goods__text">Сливочно-клубничное с присыпкой из белого шоколада</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/cream-brulee.jpg" alt="Мороженое сливочное крем-брюле" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">415</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream cream-brulee">
+							<span class="goods__text">Сливочное крем-брюле с карамельной подливкой</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/cowberry.jpg" alt="Сливочное с брусничным джемом" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">325</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream cowberry">
+							<span class="goods__text">Сливочное с брусничным джемом</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/bilberry.jpg" alt="" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">410</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class=	"goods__link link" aria-label="ice-cream bilberry">
+							<span class="goods__text">Сливочно-чернично	с цельными ягодами черники</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/cream-lemon.jpg" alt="Сливочно-лимонное мороженое" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">375</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream cream-lemon">
+							<span class="goods__text">Сливочно-лимонное с карамельной присыпкой</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/chocolate-chip.jpg" alt="Сливочное мороженое с шоколадной стружкой" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">320</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream chocolate-chip">
+							<span class="goods__text">Сливочное с шоколадной стружкой</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/cream-chocolate.jpg" alt="Сливочно-ванильное мороженое" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">440</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream cream-chocolate">
+							<span class="goods__text">Сливочно-ванильное с кусочками шоколада</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/menthol.jpg" alt="" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">435</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream menthol">
+							<span class="goods__text">Сливочноe с ментоловым сиропом</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/dark-chocolate.jpg" alt="Мороженое с кусочками черного шоколада" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">355</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream dark-chocolate">
+							<span class="goods__text">Сливочное с кусочками черного шоколада</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item">
+					<img src="img/ice-cream/mint.jpg" alt="Мятной мороженое" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">420</span>
+						<span class="goods__weight">/кг</span>
+					</div>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream mint">
+							<span class="goods__text">Сливочное с мятным сиропом</span>
+						</a>
+					</h3>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<ul class="goods__pagination pagination">
+					<li class="pagination__item pagination__item_previous">
+						<a class="pagination__link link" aria-label="previous">
 							<img class="pagination__img" src="img/icons/icon-right-small.svg" alt="Предыдущая страница" width="11" height="11">
 						</a>
 					</li>
@@ -429,57 +456,53 @@
 					<li class="pagination__item">
 						<a class="pagination__link link" href="#" aria-label="new-page">5</a>
 					</li>
-					<li class="pagination__item item item__next">
+					<li class="pagination__item pagination__item">
 						<a class="pagination__link link" href="#" aria-label="next">
 							<img class="pagination__img" src="img/icons/icon-right-small.svg" alt="Следущая страница" width="11" height="11">
 						</a>
 					</li>
 				</ul>
-			</ul>
+			</div>
 		</main>
 		<footer class="footer">
 			<ul class="footer__social social">
 				<li class="social__item">
 					<a class="social__link" aria-label="twitter" href="#">
-						<img class="social__img" src="img/icons/media/twitter.svg" alt="Читайте о мороженом в твитере" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/twitter.svg" alt="Читайте о мороженом в твитере" width="33" height="33" class="social__img">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="instagram" href="#">
-						<img class="social__img" src="img/icons/media/instagram.svg" alt="Подпишитесь на нас в instagram" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/instagram.svg" alt="Подпишитесь на нас в instagram" width="33" height="33" class="social__img">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="facebook" href="#">
-						<img class="social__img" src="img/icons/media/fb.svg" alt="Следите за нами в facebook" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/fb.svg" alt="Следите за нами в facebook" width="33" height="33" class="social__img">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="vkontakte" href="#">
-						<img class="social__img" src="img/icons/media/vk.svg" alt="Следите за нами в вконтакте" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/vk.svg" alt="Следите за нами в вконтакте" width="33" height="33" class="social__img">
 					</a>
 				</li>
 			</ul>
-			<ul class="footer__information information">
-				<div class="information__row">
+			<div class="footer__information information">
 					<div class="information__item">
 						<a href="#" class="information__link link" aria-label="about-me">
-							<stong>Для поставщиков</strong>
+							<strong>Для поставщиков</strong>
 						</a>
 					</div>
 					<div class="information__item">
 						<a href="#" class="information__link link" aria-label="production">О производстве</a>
 					</div>
-				</div>
-				<div class="information__row">
 					<div class="information__item">
 						<a href="#" class="information__link link" aria-label="documents">Наши документы</a>
 					</div>
 					<div class="information__item">
 						<a href="#" class="information__link link">Экологические стандарты</a>
 					</div>
-				</div>
-			</ul>
+			</div>
 			<div class="footer__copyright copyright">
 				<a class="copyright__link link" href="https://htmlacademy.ru" aria-label="htmlacademy">
 					<img class="copyright__img" src="img/icons/logo-htmlacademy.svg" width="110" height="40" alt="Добро пожаловать в HTML Academy">
