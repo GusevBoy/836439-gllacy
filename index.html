@@ -7,253 +7,283 @@
 		<link rel="stylesheet" href="css/master.css">
 	</head>
 	<body>
-		<header class="header">
-			<a class="header__logo-wrapper" href="index.html" aria-label="Главная страница">
-				<img class="header__logo" src="img/icons/logo.svg" alt="Добро пожаловать в Gllacy Shop" width="154" height="64" >
-			</a>
-			<nav class="header__main-nav">
-				<ul class="header__site-nav site-nav">
-					<li class="site-nav__item site-nav__item-catalog">
-						<span class="site-nav__link site-nav__link_active">Каталог</span>
-						<!-- Приходится быстро на popup  переключатся ) -->
-						<div class="site-nav__container">
-							<ul class="site-nav__popup-menu popup-menu">
-							<li class="popup-menu__item">
-								<a class="popup-menu__link" href="#" aria-label="novelties">
-									<strong>Новинки</strong>
-								</a>
+			<header class="header">
+				<!-- Если уберу href выполню требование 3.11. Логотип не является ссылкой? -->
+				<div class="header__container container">
+					<a class="header__logo-wrapper" aria-label="Главная страница">
+						<img class="header__logo" src="img/icons/logo.svg" alt="Добро пожаловать в Gllacy Shop" width="154" height="64" >
+					</a>
+					<nav class="header__main-nav">
+						<ul class="header__site-nav site-nav">
+							<li class="site-nav__item site-nav__item-goods">
+								<span class="site-nav__link">Каталог</span>
+								<div class="site-nav__container">
+									<ul class="site-nav__popup-menu popup-menu">
+									<li class="popup-menu__item">
+										<a class="popup-menu__link" href="#" aria-label="novelties">
+											<strong>Новинки</strong>
+										</a>
+									</li>
+									<li class="popup-menu__item">
+										<a class="popup-menu__link" href="catalog.html" aria-label="milks">Сливочные</a>
+									</li>
+									<li class="popup-menu__item">
+										<a class="popup-menu__link" href="#" aria-label="scrubbings">Щербеты</a>
+									</li>
+									<li class="popup-menu__item">
+										<a class="popup-menu__link" href="#" aria-label="fruit-ice">Фруктовый&nbsp;лед</a>
+									</li>
+									<li class="popup-menu__item">
+										<a class="popup-menu__link" href="#" aria-label="melorin">Мелорин</a>
+									</li>
+								</ul>
+								</div>
 							</li>
-							<li class="popup-menu__item">
-								<a class="popup-menu__link" aria-label="milks">Сливочные</a>
+							<li class="site-nav__item">
+								<a class="site-nav__link" href="#" aria-label="payment-info">Доставка и оплата</a>
 							</li>
-							<li class="popup-menu__item">
-								<a class="popup-menu__link" href="#" aria-label="scrubbings">Щербеты</a>
-							</li>
-							<li class="popup-menu__item">
-								<a class="popup-menu__link" href="#" aria-label="fruit-ice">Фруктовый&nbsp;лед</a>
-							</li>
-							<li class="popup-menu__item">
-								<a class="popup-menu__link" href="#" aria-label="melorin">Мелорин</a>
+							<li class="site-nav__item">
+								<a class="site-nav__link" href="#" aria-label="about-me">О компании</a>
 							</li>
 						</ul>
-						</div>
-					</li>
-					<li class="site-nav__item">
-						<a class="site-nav__link" href="#" aria-label="payment-info">Доставка и оплата</a>
-					</li>
-					<li class="site-nav__item">
-						<a class="site-nav__link" href="#" aria-label="about-me">О компании</a>
-					</li>
-				</ul>
-				<ul class="header__user-nav user-nav">
-					<li class="user-nav__item">
-						<button class="user-nav__button user-nav__button_search">
-							<!-- Картинка добавляется через фон, возможно стоит через img -->
-						</button>
-						<div class="user-nav__container">
-							<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
-							<label class="form__label">
-								<span class="form__desc hidden">Search</span>
-									<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
-							</label>
-						</form>
-						</div>
-					</li>
-					<li class="user-nav__item">
-						<button class="user-nav__button user-nav__button_login">
-							<!-- Картинка добавляется через фон -->
-							<span class="user-nav__desc">Вход</span>
-						</button>
-						<!-- Коонтейнер специально для псевдоэлемента, что бы не большая прослойка была -->
-						<div class="user-nav__container">
-							<!-- Можно ли так? Сдела специально так как ширина отличается -->
-							<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
-								<label class="form__label">
-									<span class="form__desc hidden">Email</span>
-									<input class="form__input" type="email" name="email" placeholder="Электроная почта">
-								</label>
-								<label class="form__label">
-									<span class="form__desc hidden">Password</span>
-									<input class="form__input" type="password" name="password" placeholder="Пароль">
-								</label>
-								<div class="flex__container">
-									<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
-									<ul class="user-nav__registration registration">
-										<li class="registration__item">
-											<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
-										</li>
-										<li class="registration__item">
-											<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
-										</li>
-									</ul>
+						<ul class="header__user-nav user-nav">
+							<li class="user-nav__item">
+								<button class="user-nav__button user-nav__button_search">
+								</button>
+								<div class="user-nav__container">
+									<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get">
+									<label class="form__label">
+										<span class="form__desc hidden">Search</span>
+											<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
+									</label>
+								</form>
 								</div>
-							</form>
-						</div>
-					</li>
-					<li class="user-nav__item">
-						<button class="user-nav__button user-nav__button_basket">
-
-							<span class="user-nav__desc">Пусто</span>
-						</button>
-						<div class="user-nav__popup-menu popup-menu hidden"> <!-- popup-menu - везде одинаковый стиль серый фон и скругленные края   -->
-							<table class="user-nav__table table">
-								<tr class="table__row">
-									<td class="table__cell">
-										<button class="table__button" type="" name="button">
-											<img class="table__img" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
-										</button>
-									</td>
-									<td class="table__cell">
-										<img class="table__img icon icon__ice-cream" src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом" width="20" height="20">
-									</td>
-									<td class="table__cell">
-										<span class="table__name">Пломбир с апельсиновым джемом</span>
-									</td>
-									<td class="table__cell">
-										<span class="table__weight">1.5кг</span> <!-- Крестик будет добавлен через фон -->
-										<span class="table__price">200руб</span>
-									</td>
-									<td class="table__cell">
-										<span class="table__total-price">300руб</span>
-									</td>
-								</tr>
-								<tr class="table__row">
-									<td class="table__cell">
-										<button class="table__button" type="" name="button">
-											<img class="table__img" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
-										</button>
-									</td>
-									<td class="table__cell">
-										<img class="table__img icon icon__ice-cream" src="img/ice-cream/strawberry.jpg" alt="Сливочно-кофейное мороженое" width="20" height="20">
-									</td>
-									<td class="table__cell">
-										<span class="table__name">Клубничный пломбир с присыпкой из белого шоколада</span>
-									</td>
-									<td class="table__cell">
-										<span class="table__weight">1,5кг</span> <!-- Крестик будет добавлен через фон -->
-										<span class="table__price">300руб</span>
-									</td>
-									<td class="table__cell">
-										<span class="table__total-price">450руб</span>
-									</td>
-								</tr>
-								<tr class="table__row">
-									<td class="table__cell table__cell_sum" colspan="5">
-										Итого: 750руб
-									</td>
-								</tr>
-							</table>
-							<a class="user-nav__link button" href="orders.html" aria-label="checkout">Оформить заказ</a>
-						</div>
-					</li>
-				</ul>
-			</nav>
-			<section class="header__contacts contacts">
-				<h2 class="contacts__title hidden">Контактная информация</h2>
-				<span class="contacts__work-time">c 10 до 20, ежедневно</span>
-				<span class="contacts__phone">8 812 450-25-25</span>
-			</section>
-		</header>
-		<main class="container">
-			<div class="slider">
-				<img class="slider__img" src="img/content/ice-cream_1.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
-				<img class="slider__img hidden" src="img/content/ice-cream_2.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
-				<img class="slider__img hidden" src="img/content/ice-cream_3.png" width="500" height="500" alt="Два аппетитных рожка с мороженым">
+							</li>
+							<li class="user-nav__item">
+								<button class="user-nav__button user-nav__button_login">
+									<!-- Картинка добавляется через фон -->
+									<span class="user-nav__desc">Вход</span>
+								</button>
+								<!-- Коонтейнер специально для псевдоэлемента, что бы не большая прослойка была -->
+								<div class="user-nav__container">
+									<!-- Можно ли так? Сдела специально так как ширина отличается -->
+									<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
+										<label class="form__label">
+											<span class="form__desc hidden">Email</span>
+											<input class="form__input" type="email" name="email" placeholder="Электроная почта">
+										</label>
+										<label class="form__label">
+											<span class="form__desc hidden">Password</span>
+											<input class="form__input" type="password" name="password" placeholder="Пароль">
+										</label>
+										<div class="flex__container">
+											<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
+											<ul class="user-nav__registration registration">
+												<li class="registration__item">
+													<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
+												</li>
+												<li class="registration__item">
+													<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
+												</li>
+											</ul>
+										</div>
+									</form>
+								</div>
+							</li>
+							<li class="user-nav__item">
+								<button class="user-nav__button user-nav__button_basket">
+									<span class="user-nav__desc">Пусто</span>
+								</button>
+								<div class="user-nav__container hidden">
+									<div class="user-nav__popup-menu popup-menu">
+										<table class="user-nav__table table">
+											<tr class="table__row">
+												<td class="table__cell">
+													<button class="table__button" type="submit" name="button">
+														<img class="table__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
+													</button>
+												</td>
+												<td class="table__cell">
+													<img class="table__img icon icon__ice-cream" src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом" width="20" height="20">
+												</td>
+												<td class="table__cell">
+													<span class="table__name">Пломбир с апельсиновым джемом</span>
+												</td>
+												<td class="table__cell">
+													<span class="table__weight">1.5кг x</span> <!-- Крестик будет добавлен через фон -->
+													<span class="table__price">200руб</span>
+												</td>
+												<td class="table__cell">
+													<span class="table__total-price">300руб</span>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td class="table__cell">
+													<button class="table__button" type="submit" name="button">
+														<img class="table__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
+													</button>
+												</td>
+												<td class="table__cell">
+													<img class="table__img icon icon__ice-cream" src="img/ice-cream/strawberry.jpg" alt="Сливочно-кофейное мороженое" width="20" height="20">
+												</td>
+												<td class="table__cell">
+													<span class="table__name">Клубничный пломбир с присыпкой из белого шоколада</span>
+												</td>
+												<td class="table__cell">
+													<span class="table__weight">1,5кг x</span> <!-- Крестик будет добавлен через фон -->
+													<span class="table__price">300руб</span>
+												</td>
+												<td class="table__cell">
+													<span class="table__total-price">450руб</span>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td class="table__cell table__cell-sum" colspan="5">
+													Итого: 750руб
+												</td>
+											</tr>
+										</table>
+										<a class="user-nav__link button" href="orders.html" aria-label="checkout">Оформить заказ</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__contacts contacts">
+						<h2 class="contacts__title hidden">Контактная информация</h2>
+						<span class="contacts__work-time_right">c 10 до 20, ежедневно</span>
+						<span class="contacts__phone">8 812 450-25-25</span>
+					</div>
+				</div>
+			</header>
+			<div class="slider container">
+				<div class="slider__img-drum">
+					<img class="slider__img" src="img/content/ice-cream_1.png" width="1054" height="881" alt="Два аппетитных рожка с мороженым">
+					<img class="slider__img hidden" src="img/content/ice-cream_2.png" width="1054" height="881" alt="Два аппетитных рожка с мороженым">
+					<img class="slider__img hidden" src="img/content/ice-cream_3.png" width="1054" height="881" alt="Два аппетитных рожка с мороженым">
+				</div>
+				<div class="slider__title-drum">
+					<span class="slider__title">Крем-брюле и пломбир с малиновым джемом</span>
+					<span class="slider__title hidden">Шоколадный пломбир и лимонный сорбет </span>
+					<span class="slider__title hidden">Пломбир с помадкой и клубничный щербет</span>
+				</div>
 				<div class="slider__radio">
 					<label class="slider__label">
-						<input class="slider__input" type="radio" name="slider">
-						<div class="slider__disc"></div>
+						<input class="slider__input" type="radio" name="slider" checked>
+						<span class="slider__disc"></span>
 					</label>
 					<label class="slider__label">
 						<input class="slider__input" type="radio" name="slider">
-						<div class="slider__disc"></div>
+						<span class="slider__disc"></span>
 					</label>
 					<label class="slider__label">
 						<input class="slider__input" type="radio" name="slider">
-						<div class="slider__disc"></div>
+						<span class="slider__disc"></span>
 					</label>
 				</div>
+				<a href="" class="slider__link button">
+					<span class="button__text">Давайте оба!</span>
+				</a>
 			</div>
+		<main class="main__container container">
 			<div class="news">
-				<section class="news__item theme theme_raspberry">
+				<div class="news__item theme theme_raspberry">
 					<h2 class="news__title title">Малинка даром!</h2>
 					<p class="news__subtitle subtitle">
 						При покупке 2 кг любого фруктового мороженого,
 						добавим в ваш заказ банку малиного варенья бесплатно
 					</p>
-				</section>
-				<section class="news__item theme theme_chocolate">
+					<a href="#" aria-label="Возьми малину" class="news__link button">Хочу варенье!</a>
+				</div>
+				<div class="news__item theme theme_chocolate">
 					<h2 class="news__title title">Шоколадки даром!</h2>
 					<p class="news__subtitle subtitle">
 						При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершено бесплатною
 					</p>
-				</section>
+					<a href="#" aria-label="Возьми шоколад" class="news__link button">Хочу шоколадки!</a>
+				</div>
 			</div>
-			<li class="catalog__row">
-				<section class="catalog__item">
-					<img src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом " class="catalog__img" width="267" height="267">
-					<div class="catalog__price">
-						<span class="catalog__value">310</span>
-						<span class="catalog__weight">/кг</span> <!-- Рубль добавлен будет через фон -->
+			<div class="goods-top">
+				<article class="goods__item goods__item_hit">
+					<img src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом " class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">310</span>
+						<span class="goods__weight">/кг</span> <!-- Рубль добавлен будет через фон -->
 					</div>
-					<h3 class="catalog__title">
-						<a href="#" class="catalog__link link" aria-label="ice-cream orange">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream orange">
+							<span class="goods__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+						</a>
 					</h3>
-					<button class="catalog__button hidde button" type="button" name="button">Быстрый просмотр</button>
-				</section>
-				<section class="catalog__item">
-					<img src="img/ice-cream/coffee.jpg" alt="Сливочно-кофейное мороженое" class="catalog__img" width="267" height="267">
-					<div class="catalog__price">
-						<span class="catalog__value">380</span>
-						<span class="catalog__weight">/кг</span>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item goods__item_hit">
+					<img src="img/ice-cream/coffee.jpg" alt="Сливочно-кофейное мороженое" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">380</span>
+						<span class="goods__weight">/кг</span>
 					</div>
-					<h3 class="catalog__title">
-						<a href="#" class="catalog__link link" aria-label="ice-cream coffe">Сливочно-кофейное с кусочками шоколада</a>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream coffe">
+							<span class="goods__text">Сливочно-кофейное с кусочками шоколада</span>
+						</a>
 					</h3>
-					<button class="catalog__button hidde button" type="button" name="button">Быстрый просмотр</button>
-				</section>
-				<section class="catalog__item">
-					<img src="img/ice-cream/strawberry.jpg" alt="Сливочно-клубничное мороженое" class="catalog__img" width="267" height="267">
-					<div class="catalog__price">
-						<span class="catalog__value">355</span>
-						<span class="catalog__weight">/кг</span>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item goods__item_hit">
+					<img src="img/ice-cream/strawberry.jpg" alt="Сливочно-клубничное мороженое" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">355</span>
+						<span class="goods__weight">/кг</span>
 					</div>
-					<h3 class="catalog__title">
-						<a href="#" class="catalog__link link" aria-label="ice-cream strawberry">Сливочно-клубничное с присыпкой из белого шоколада</a>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream strawberry">
+							<span class="goods__text">Сливочно-клубничное с присыпкой из белого шоколада</span>
+						</a>
 					</h3>
-					<button class="catalog__button hidde button" type="button" name="button">Быстрый просмотр</button>
-				</section>
-				<section class="catalog__item">
-					<img src="img/ice-cream/cream-brulee.jpg" alt="Мороженое сливочное крем-брюле" class="catalog__img" width="267" height="267">
-					<div class="catalog__price">
-						<span class="catalog__value">415</span>
-						<span class="catalog__weight">/кг</span>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+				<article class="goods__item goods__item_hit">
+					<img src="img/ice-cream/cream-brulee.jpg" alt="Мороженое сливочное крем-брюле" class="goods__img" width="267" height="267">
+					<div class="goods__price">
+						<span class="goods__value">415</span>
+						<span class="goods__weight">/кг</span>
 					</div>
-					<h3 class="catalog__title">
-						<a href="#" class="catalog__link link" aria-label="ice-cream cream-brulee">Сливочное крем-брюле с карамельной подливкой</a>
+					<h3 class="goods__title">
+						<a href="#" class="goods__link link" aria-label="ice-cream cream-brulee">
+							<span class="goods__text">Сливочное крем-брюле с карамельной подливкой</span>
+						</a>
 					</h3>
-					<button class="catalog__button hidde button" type="button" name="button">Быстрый просмотр</button>
-				</section>
-			</li>
+					<button class="goods__button button" type="button" name="button">
+						<span class="button__text">Быстрый просмотр</span>
+					</button>
+				</article>
+			</div>
 			<section class="facts">
 				<h2 class="facts__title title">
 					Магазин Глэйси — это онлайн- и офлайн-магазин
 					по продаже мороженого собственого производства на развес
 				</h2>
 				<ul class="facts__list">
-					<li class="facts__item item item_icon-ice"> <!--  А так можно ? -->
+					<li class="facts__item facts__item_ice"> <!--  А так можно ? -->
 						Все наше мороженое изготавливается на собственном производстве,
 						с использованием современого оборудования и проверенных временем технологий.
 					</li>
-					<li class="facts__item item item_icon-leaf">
+					<li class="facts__item facts__item_leaf">
 						Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний,
 						с которыми нас связывает долговременное сотрудничество.
 					</li>
-					<li class="facts__item item item_icon-cow">
+					<li class="facts__item facts__item_cow">
 						Все наше мороженое изготавливается на собственном производстве,
 						с использованием современого оборудования и проверенных временем технологий.
 					</li>
-					<li class="facts__item item item_icon-deg">
+					<li class="facts__item facts__item_deg">
 						Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний,
 						с которыми нас связывает долговременное сотрудничество.
 					</li>
@@ -263,12 +293,14 @@
 				<article class="recipes">
 					<p class="recipes__desc">Новое в нашем блоге</p>
 					<h4 class="recipes__title">
-						<a class="recipes__link link">10 способов сервировки фруктовых щербетов к столу</link>
+						<a class="recipes__link link" href="#" aria-label="Сервируй от души">
+							<span class="recipes__text">10 способов сервировки фруктовых щербетов к столу</span>
+						</a>
 					</h4>
 				</article>
 				<div class="subscribe">
 					<p class="subscribe__desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-					<form class="subscribe__form form" action="https://echo.htmlacademy.ru" method="post">
+					<form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
 						<label class="form__label">
 							<input class="subscribe__input" type="email" name="subscribe-email" placeholder="Электроная почта">
 						</label>
@@ -276,70 +308,80 @@
 					</form>
 				</div>
 			</div>
-			<div class="map">
-				<img src="img/theme/map.jpg" alt="Мороженое с апельсиновым джемом " class="map__img" width="1200" height="430">
+		</main>
+		<div class="map">
+			<!-- Решил сделать внутрений контейнер, вопервых что бы спозиционировать контактную информацию,
+		во вторых для картинки, если джска не загрузится (картинку спрятать можно если что) -->
+			<div class="map__container">
+				<img class="map__img" src="img/theme/map.jpg" alt="Мороженое с апельсиновым джемом " width="1200" height="430">
 				<section class="map__contacts contacts">
 					<h2 class="contacts__title hidden">Контактная информация</h2>
-					<span class="contacts__desc-addres">Адрес главного офиса и&nbsp;офлайн&#8209;магазина:
-</span>
-					<span class="contacts__addres">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+					<span class="contacts__desc-addres">Адрес главного офиса и&nbsp;офлайн&#8209;магазина:</span>
+					<span class="
+
+					s__addres">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
 					<span class="contacts__desc-phone">Для заказов по телефону</span>
 					<span class="contacts__phone">8 812 450-25-25</span>
 					<span class="contacts__work-time">(c 10 до 20, ежедневно)</span>
 					<button class="contacts__button button" type="button" name="button-communication">Форма обратной связи</button>
 				</section>
+				<div class="map__marker"></div>
 			</div>
-		</main>
-		<footer class="footer">
+		</div>
+		<!-- как сделать модальное окно? -->
+		<form class="feedback hidden" action="https://echo.htmlacademy.ru" method="get">
+			<h2 class="feedback__title">Мы обязательно вам ответим!</h2>
+			<input type="text" class="feedback__input" name="name" placeholder="Как вас зовут?">
+			<input type="email" class="feedback__input" name="email" placeholder="Ваша почта для ответа?">
+			<textarea class="feedback__textarea" name="textarea" placeholder="Напишите что-нибудь..."></textarea>
+			<button class="feedback__button button" type="submit" name="feedback">Отправить</button>
+			<span class="feedback__close"></span>
+		</form>
+		<footer class="footer container">
 			<ul class="footer__social social">
 				<li class="social__item">
 					<a class="social__link" aria-label="twitter" href="#">
-						<img class="social__img" src="img/icons/media/twitter.svg" alt="Читайте о мороженом в твитере" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/twitter.svg" alt="Читайте о мороженом в твитере" width="33" height="33">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="instagram" href="#">
-						<img class="social__img" src="img/icons/media/instagram.svg" alt="Подпишитесь на нас в instagram" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/instagram.svg" alt="Подпишитесь на нас в instagram" width="33" height="33">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="facebook" href="#">
-						<img class="social__img" src="img/icons/media/fb.svg" alt="Следите за нами в facebook" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/fb.svg" alt="Следите за нами в facebook" width="33" height="33">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="vkontakte" href="#">
-						<img class="social__img" src="img/icons/media/vk.svg" alt="Следите за нами в вконтакте" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/vk.svg" alt="Следите за нами в вконтакте" width="33" height="33">
 					</a>
 				</li>
 			</ul>
-			<ul class="footer__information information">
-				<div class="information__row">
+			<div class="footer__information information">
 					<div class="information__item">
 						<a href="#" class="information__link link" aria-label="about-me">
-							<stong>Для поставщиков</strong>
+							<strong>Для поставщиков</strong>
 						</a>
 					</div>
 					<div class="information__item">
 						<a href="#" class="information__link link" aria-label="production">О производстве</a>
 					</div>
-				</div>
-				<div class="information__row">
 					<div class="information__item">
 						<a href="#" class="information__link link" aria-label="documents">Наши документы</a>
 					</div>
 					<div class="information__item">
 						<a href="#" class="information__link link">Экологические стандарты</a>
 					</div>
-				</div>
-			</ul>
+			</div>
 			<div class="footer__copyright copyright">
 				<a class="copyright__link link" href="https://htmlacademy.ru" aria-label="htmlacademy">
 					<img class="copyright__img" src="img/icons/logo-htmlacademy.svg" width="110" height="40" alt="Добро пожаловать в HTML Academy">
 				</a>
 				<p class="copyright__desc">
 					Сделано в
-					<!-- Правильно ли я добавил модификатор ? -->
 					<a class="copyright__link_htmlacademy" href="https://htmlacademy.ru">HTML Academy</a> © 2017
 				</p>
 			</div>

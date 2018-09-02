@@ -7,153 +7,155 @@
 		<link rel="stylesheet" href="css/master.css">
 	</head>
 	<body>
-		<header class="header">
-			<a class="header__logo-wrapper" href="index.html" aria-label="Главная страница">
-				<img class="header__logo" src="img/icons/logo.svg" alt="Добро пожаловать в Gllacy Shop" width="154" height="64" >
-			</a>
-			<nav class="header__main-nav">
-				<ul class="header__site-nav site-nav">
-					<li class="site-nav__item site-nav__item-goods">
-						<span class="site-nav__link site-nav__link_active">Каталог</span>
-						<!-- Приходится быстро на popup  переключатся ) -->
-						<div class="site-nav__container">
-							<ul class="site-nav__popup-menu popup-menu">
-							<li class="popup-menu__item">
-								<a class="popup-menu__link" href="#" aria-label="novelties">
-									<strong>Новинки</strong>
-								</a>
-							</li>
-							<li class="popup-menu__item">
-								<a class="popup-menu__link popup-menu__link_active" aria-label="milks">Сливочные</a>
-							</li>
-							<li class="popup-menu__item">
-								<a class="popup-menu__link" href="#" aria-label="scrubbings">Щербеты</a>
-							</li>
-							<li class="popup-menu__item">
-								<a class="popup-menu__link" href="#" aria-label="fruit-ice">Фруктовый&nbsp;лед</a>
-							</li>
-							<li class="popup-menu__item">
-								<a class="popup-menu__link" href="#" aria-label="melorin">Мелорин</a>
-							</li>
-						</ul>
-						</div>
-					</li>
-					<li class="site-nav__item">
-						<a class="site-nav__link" href="#" aria-label="payment-info">Доставка и оплата</a>
-					</li>
-					<li class="site-nav__item">
-						<a class="site-nav__link" href="#" aria-label="about-me">О компании</a>
-					</li>
-				</ul>
-				<ul class="header__user-nav user-nav">
-					<li class="user-nav__item">
-						<button class="user-nav__button user-nav__button_search">
-							<!-- Картинка добавляется через фон, возможно стоит через img -->
-						</button>
-						<div class="user-nav__container">
-							<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
-							<label class="form__label">
-								<span class="form__desc hidden">Search</span>
-									<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
-							</label>
-						</form>
-						</div>
-					</li>
-					<li class="user-nav__item">
-						<button class="user-nav__button user-nav__button_login">
-							<!-- Картинка добавляется через фон -->
-							<span class="user-nav__desc">Вход</span>
-						</button>
-						<!-- Коонтейнер специально для псевдоэлемента, что бы не большая прослойка была -->
-						<div class="user-nav__container">
-							<!-- Можно ли так? Сдела специально так как ширина отличается -->
-							<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
-								<label class="form__label">
-									<span class="form__desc hidden">Email</span>
-									<input class="form__input" type="email" name="email" placeholder="Электроная почта">
-								</label>
-								<label class="form__label">
-									<span class="form__desc hidden">Password</span>
-									<input class="form__input" type="password" name="password" placeholder="Пароль">
-								</label>
-								<div class="flex__container">
-									<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
-									<ul class="user-nav__registration registration">
-										<li class="registration__item">
-											<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
-										</li>
-										<li class="registration__item">
-											<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
-										</li>
-									</ul>
-								</div>
-							</form>
-						</div>
-					</li>
-					<li class="user-nav__item">
-						<button class="user-nav__button user-nav__button_active user-nav__button_basket-red">
-							<span class="user-nav__desc">2 товара</span>
-						</button>
-						<div class="user-nav__container">
-							<div class="user-nav__popup-menu popup-menu"> <!-- popup-menu - везде одинаковый стиль серый фон и скругленные края   -->
-								<table class="user-nav__table table">
-									<tr class="table__row">
-										<td class="table__cell">
-											<button class="table__button" type="submit" name="button">
-												<img class="table__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
-											</button>
-										</td>
-										<td class="table__cell">
-											<img class="table__img icon icon__ice-cream" src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом" width="20" height="20">
-										</td>
-										<td class="table__cell">
-											<span class="table__name">Пломбир с апельсиновым джемом</span>
-										</td>
-										<td class="table__cell">
-											<span class="table__weight">1.5кг x</span> <!-- Крестик будет добавлен через фон -->
-											<span class="table__price">200руб</span>
-										</td>
-										<td class="table__cell">
-											<span class="table__total-price">300руб</span>
-										</td>
-									</tr>
-									<tr class="table__row">
-										<td class="table__cell">
-											<button class="table__button" type="submit" name="button">
-												<img class="table__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
-											</button>
-										</td>
-										<td class="table__cell">
-											<img class="table__img icon icon__ice-cream" src="img/ice-cream/strawberry.jpg" alt="Сливочно-кофейное мороженое" width="20" height="20">
-										</td>
-										<td class="table__cell">
-											<span class="table__name">Клубничный пломбир с присыпкой из белого шоколада</span>
-										</td>
-										<td class="table__cell">
-											<span class="table__weight">1,5кг x</span> <!-- Крестик будет добавлен через фон -->
-											<span class="table__price">300руб</span>
-										</td>
-										<td class="table__cell">
-											<span class="table__total-price">450руб</span>
-										</td>
-									</tr>
-									<tr class="table__row">
-										<td class="table__cell table__cell-sum" colspan="5">
-											Итого: 750руб
-										</td>
-									</tr>
-								</table>
-								<a class="user-nav__link button" href="orders.html" aria-label="checkout">Оформить заказ</a>
+		<header class="header ">
+			<div class="header__container container">
+				<a class="header__logo-wrapper" href="index.html" aria-label="Главная страница">
+					<img class="header__logo" src="img/icons/logo.svg" alt="Добро пожаловать в Gllacy Shop" width="154" height="64" >
+				</a>
+				<nav class="header__main-nav">
+					<ul class="header__site-nav site-nav">
+						<li class="site-nav__item site-nav__item-goods">
+							<span class="site-nav__link site-nav__link_active">Каталог</span>
+							<!-- Приходится быстро на popup  переключатся ) -->
+							<div class="site-nav__container">
+								<ul class="site-nav__popup-menu popup-menu">
+								<li class="popup-menu__item">
+									<a class="popup-menu__link" href="#" aria-label="novelties">
+										<strong>Новинки</strong>
+									</a>
+								</li>
+								<li class="popup-menu__item">
+									<a class="popup-menu__link popup-menu__link_active" aria-label="milks">Сливочные</a>
+								</li>
+								<li class="popup-menu__item">
+									<a class="popup-menu__link" href="#" aria-label="scrubbings">Щербеты</a>
+								</li>
+								<li class="popup-menu__item">
+									<a class="popup-menu__link" href="#" aria-label="fruit-ice">Фруктовый&nbsp;лед</a>
+								</li>
+								<li class="popup-menu__item">
+									<a class="popup-menu__link" href="#" aria-label="melorin">Мелорин</a>
+								</li>
+							</ul>
 							</div>
-						</div>
-					</li>
-				</ul>
-			</nav>
-			<section class="header__contacts contacts">
-				<h2 class="contacts__title hidden">Контактная информация</h2>
-				<span class="contacts__work-time">c 10 до 20, ежедневно</span>
-				<span class="contacts__phone">8 812 450-25-25</span>
-			</section>
+						</li>
+						<li class="site-nav__item">
+							<a class="site-nav__link" href="#" aria-label="payment-info">Доставка и оплата</a>
+						</li>
+						<li class="site-nav__item">
+							<a class="site-nav__link" href="#" aria-label="about-me">О компании</a>
+						</li>
+					</ul>
+					<ul class="header__user-nav user-nav">
+						<li class="user-nav__item">
+							<button class="user-nav__button user-nav__button_search">
+								<!-- Картинка добавляется через фон, возможно стоит через img -->
+							</button>
+							<div class="user-nav__container">
+								<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get"> <!-- Спрятал форму -->
+								<label class="form__label">
+									<span class="form__desc hidden">Search</span>
+										<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
+								</label>
+							</form>
+							</div>
+						</li>
+						<li class="user-nav__item">
+							<button class="user-nav__button user-nav__button_login">
+								<!-- Картинка добавляется через фон -->
+								<span class="user-nav__desc">Вход</span>
+							</button>
+							<!-- Коонтейнер специально для псевдоэлемента, что бы не большая прослойка была -->
+							<div class="user-nav__container">
+								<!-- Можно ли так? Сдела специально так как ширина отличается -->
+								<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
+									<label class="form__label">
+										<span class="form__desc hidden">Email</span>
+										<input class="form__input" type="email" name="email" placeholder="Электроная почта">
+									</label>
+									<label class="form__label">
+										<span class="form__desc hidden">Password</span>
+										<input class="form__input" type="password" name="password" placeholder="Пароль">
+									</label>
+									<div class="flex__container">
+										<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
+										<ul class="user-nav__registration registration">
+											<li class="registration__item">
+												<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
+											</li>
+											<li class="registration__item">
+												<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+						</li>
+						<li class="user-nav__item">
+							<button class="user-nav__button user-nav__button_active user-nav__button_basket-red">
+								<span class="user-nav__desc">2 товара</span>
+							</button>
+							<div class="user-nav__container">
+								<div class="user-nav__popup-menu popup-menu"> <!-- popup-menu - везде одинаковый стиль серый фон и скругленные края   -->
+									<table class="user-nav__table table">
+										<tr class="table__row">
+											<td class="table__cell">
+												<button class="table__button" type="submit" name="button">
+													<img class="table__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
+												</button>
+											</td>
+											<td class="table__cell">
+												<img class="table__img icon icon__ice-cream" src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом" width="20" height="20">
+											</td>
+											<td class="table__cell">
+												<span class="table__name">Пломбир с апельсиновым джемом</span>
+											</td>
+											<td class="table__cell">
+												<span class="table__weight">1.5кг x</span> <!-- Крестик будет добавлен через фон -->
+												<span class="table__price">200руб</span>
+											</td>
+											<td class="table__cell">
+												<span class="table__total-price">300руб</span>
+											</td>
+										</tr>
+										<tr class="table__row">
+											<td class="table__cell">
+												<button class="table__button" type="submit" name="button">
+													<img class="table__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
+												</button>
+											</td>
+											<td class="table__cell">
+												<img class="table__img icon icon__ice-cream" src="img/ice-cream/strawberry.jpg" alt="Сливочно-кофейное мороженое" width="20" height="20">
+											</td>
+											<td class="table__cell">
+												<span class="table__name">Клубничный пломбир с присыпкой из белого шоколада</span>
+											</td>
+											<td class="table__cell">
+												<span class="table__weight">1,5кг x</span> <!-- Крестик будет добавлен через фон -->
+												<span class="table__price">300руб</span>
+											</td>
+											<td class="table__cell">
+												<span class="table__total-price">450руб</span>
+											</td>
+										</tr>
+										<tr class="table__row">
+											<td class="table__cell table__cell-sum" colspan="5">
+												Итого: 750руб
+											</td>
+										</tr>
+									</table>
+									<a class="user-nav__link button" href="orders.html" aria-label="checkout">Оформить заказ</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<section class="header__contacts contacts">
+					<h2 class="contacts__title hidden">Контактная информация</h2>
+					<span class="contacts__work-time_right">c 10 до 20, ежедневно</span>
+					<span class="contacts__phone">8 812 450-25-25</span>
+				</section>
+			</div>
 		</header>
 		<main class="container">
 			<ul class="breadcrumbs">
@@ -203,22 +205,22 @@
 					<div class="filter__radio radio">
 						<label class="radio__label">
 							<input class="radio__input" type="radio" name="caloricity">
-							<div class="radio__disc"></div>
+							<span class="radio__disc"></span>
 							<span class="radio__desc">0%</span>
 						</label>
 						<label class="radio__label">
 							<input class="radio__input" type="radio" name="caloricity">
-							<div class="radio__disc"></div>
+							<span class="radio__disc"></span>
 							<span class="radio__desc">до 10%</span>
 						</label>
 						<label class="radio__label">
 							<input class="radio__input" type="radio" name="caloricity">
-							<div class="radio__disc"></div>
+							<span class="radio__disc"></span>
 							<span class="radio__desc">до 20%</span>
 						</label>
 						<label class="radio__label">
 							<input class="radio__input" type="radio" name="caloricity">
-							<div class="radio__disc"></div>
+							<span class="radio__disc"></span>
 							выше 30%
 						</label>
 					</div>
@@ -228,27 +230,27 @@
 					<div class="filter__checkbox checkbox">
 						<label class="checkbox__label">
 							<input class="checkbox__input" type="checkbox" name="fillers">
-							<div class="checkbox__square"></div>
+							<span class="checkbox__square"></span>
 							<span class="checkbox__desc"> шоколадные</span>
 						</label>
 						<label class="checkbox__label">
 							<input class="checkbox__input" type="checkbox" name="fillers">
-							<div class="checkbox__square"></div>
+							<span class="checkbox__square"></span>
 							<span class="checkbox__desc"> сахарные присыпки</span>
 						</label>
 						<label class="checkbox__label">
 							<input class="checkbox__input" type="checkbox" name="fillers">
-							<div class="checkbox__square"></div>
+							<span class="checkbox__square"></span>
 							<span class="checkbox__desc"> фрукты</span>
 						</label>
 						<label class="checkbox__label">
 							<input class="checkbox__input" type="checkbox" name="fillers">
-							<div class="checkbox__square"></div>
+							<span class="checkbox__square"></span>
 							<span class="checkbox__desc"> сиропы</span>
 						</label>
 						<label class="checkbox__label">
 							<input class="checkbox__input" type="checkbox" name="fillers">
-							<div class="checkbox__square"></div>
+							<span class="checkbox__square"></span>
 							<span class="checkbox__desc"> джемы</span>
 						</label>
 					</div>
@@ -464,26 +466,26 @@
 				</ul>
 			</div>
 		</main>
-		<footer class="footer">
+		<footer class="footer container">
 			<ul class="footer__social social">
 				<li class="social__item">
 					<a class="social__link" aria-label="twitter" href="#">
-						<img class="social__img" src="img/icons/twitter.svg" alt="Читайте о мороженом в твитере" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/twitter.svg" alt="Читайте о мороженом в твитере" width="33" height="33">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="instagram" href="#">
-						<img class="social__img" src="img/icons/instagram.svg" alt="Подпишитесь на нас в instagram" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/instagram.svg" alt="Подпишитесь на нас в instagram" width="33" height="33">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="facebook" href="#">
-						<img class="social__img" src="img/icons/fb.svg" alt="Следите за нами в facebook" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/fb.svg" alt="Следите за нами в facebook" width="33" height="33">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="vkontakte" href="#">
-						<img class="social__img" src="img/icons/vk.svg" alt="Следите за нами в вконтакте" width="33" height="33" class="social__img">
+						<img class="social__img" src="img/icons/vk.svg" alt="Следите за нами в вконтакте" width="33" height="33">
 					</a>
 				</li>
 			</ul>
@@ -509,7 +511,6 @@
 				</a>
 				<p class="copyright__desc">
 					Сделано в
-					<!-- Правильно ли я добавил модификатор ? -->
 					<a class="copyright__link_htmlacademy" href="https://htmlacademy.ru">HTML Academy</a> © 2017
 				</p>
 			</div>
