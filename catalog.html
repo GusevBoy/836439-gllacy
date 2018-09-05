@@ -18,23 +18,23 @@
 							<span class="site-nav__link site-nav__link_active">Каталог</span>
 							<!-- Приходится быстро на popup  переключатся ) -->
 							<div class="site-nav__container">
-								<ul class="site-nav__popup-menu popup-menu">
-								<li class="popup-menu__item">
-									<a class="popup-menu__link" href="#" aria-label="novelties">
+								<ul class="site-nav__popup popup">
+								<li class="popup__item">
+									<a class="popup__link" href="#" aria-label="novelties">
 										<strong>Новинки</strong>
 									</a>
 								</li>
-								<li class="popup-menu__item">
-									<a class="popup-menu__link popup-menu__link_active" aria-label="milks">Сливочные</a>
+								<li class="popup__item">
+									<a class="popup__link popup__link_active" aria-label="milks">Сливочные</a>
 								</li>
-								<li class="popup-menu__item">
-									<a class="popup-menu__link" href="#" aria-label="scrubbings">Щербеты</a>
+								<li class="popup__item">
+									<a class="popup__link" href="#" aria-label="scrubbings">Щербеты</a>
 								</li>
-								<li class="popup-menu__item">
-									<a class="popup-menu__link" href="#" aria-label="fruit-ice">Фруктовый&nbsp;лед</a>
+								<li class="popup__item">
+									<a class="popup__link" href="#" aria-label="fruit-ice">Фруктовый&nbsp;лед</a>
 								</li>
-								<li class="popup-menu__item">
-									<a class="popup-menu__link" href="#" aria-label="melorin">Мелорин</a>
+								<li class="popup__item">
+									<a class="popup__link" href="#" aria-label="melorin">Мелорин</a>
 								</li>
 							</ul>
 							</div>
@@ -96,54 +96,41 @@
 								<span class="user-nav__desc">2 товара</span>
 							</button>
 							<div class="user-nav__container">
-								<div class="user-nav__popup-menu popup-menu"> <!-- popup-menu - везде одинаковый стиль серый фон и скругленные края   -->
-									<table class="user-nav__table table">
-										<tr class="table__row">
-											<td class="table__cell">
-												<button class="table__button" type="submit" name="button">
-													<img class="table__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
+								<div class="user-nav__popup popup">
+									<div class="popup__order order">
+										<div class="order__row">
+											<div class="order__desc">
+												<button class="order__button" type="button" name="button">
+													<img class="order__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
 												</button>
-											</td>
-											<td class="table__cell">
-												<img class="table__img icon icon__ice-cream" src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом" width="20" height="20">
-											</td>
-											<td class="table__cell">
-												<span class="table__name">Пломбир с апельсиновым джемом</span>
-											</td>
-											<td class="table__cell">
-												<span class="table__weight">1.5кг x</span> <!-- Крестик будет добавлен через фон -->
-												<span class="table__price">200руб</span>
-											</td>
-											<td class="table__cell">
-												<span class="table__total-price">300руб</span>
-											</td>
-										</tr>
-										<tr class="table__row">
-											<td class="table__cell">
-												<button class="table__button" type="submit" name="button">
-													<img class="table__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
+												<img class="order__ice-cream" src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом" width="33" height="33">
+												<span class="order__name">Пломбир с апельсиновым джемом</span>
+											</div>
+											<div class="order__price">
+												<span class="order__weight">1.5кг&nbsp;x</span>
+												<span class="order__value">200руб</span>
+												<span class="order__total-price">300руб</span>
+											</div>
+										</div>
+										<div class="order__row">
+											<div class="order__desc">
+												<button class="order__button" type="button" name="button">
+													<img class="order__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
 												</button>
-											</td>
-											<td class="table__cell">
-												<img class="table__img icon icon__ice-cream" src="img/ice-cream/strawberry.jpg" alt="Сливочно-кофейное мороженое" width="20" height="20">
-											</td>
-											<td class="table__cell">
-												<span class="table__name">Клубничный пломбир с присыпкой из белого шоколада</span>
-											</td>
-											<td class="table__cell">
-												<span class="table__weight">1,5кг x</span> <!-- Крестик будет добавлен через фон -->
-												<span class="table__price">300руб</span>
-											</td>
-											<td class="table__cell">
-												<span class="table__total-price">450руб</span>
-											</td>
-										</tr>
-										<tr class="table__row">
-											<td class="table__cell table__cell-sum" colspan="5">
-												Итого: 750руб
-											</td>
-										</tr>
-									</table>
+												<img class="order__ice-cream" src="img/ice-cream/strawberry.jpg" alt="Сливочно-кофейное мороженое" width="33" height="33">
+												<span class="order__name">Клубничный пломбир с присыпкой из белого шоколада</span>
+											</div>
+											<div class="order__price">
+												<span class="order__weight">1,5кг&nbsp;x</span> <!-- Крестик будет добавлен через фон -->
+												<span class="order__value">300руб</span>
+												<span class="order__total-price">450руб</span>
+											</div>
+										</div>
+										<footer class="order__footer">
+											<span class="order__total-sum">Итого: 750 руб.</span>
+										</footer>
+									</div>
+
 									<a class="user-nav__link button" href="orders.html" aria-label="checkout">Оформить заказ</a>
 								</div>
 							</div>
@@ -152,7 +139,7 @@
 				</nav>
 				<section class="header__contacts contacts">
 					<h2 class="contacts__title hidden">Контактная информация</h2>
-					<span class="contacts__work-time_right">c 10 до 20, ежедневно</span>
+					<span class="contacts__work-time_right">C 10 до 20, ежедневно</span>
 					<span class="contacts__phone">8 812 450-25-25</span>
 				</section>
 			</div>
@@ -183,7 +170,7 @@
 					</select>
 				</fieldset>
 				<fieldset class="filter__list">
-					<legend class="filter__title">Цена: 100руб-500руб</legend>
+					<legend class="filter__title">Цена: 100 руб. – 500 руб.</legend>
 					<label class="filter__label hidden">
 						<input class="filter__input" type="number" name="min-price">Минимальная цена
 					</label>
@@ -216,12 +203,12 @@
 						<label class="radio__label">
 							<input class="radio__input" type="radio" name="caloricity">
 							<span class="radio__disc"></span>
-							<span class="radio__desc">до 20%</span>
+							<span class="radio__desc">до 30%</span>
 						</label>
 						<label class="radio__label">
 							<input class="radio__input" type="radio" name="caloricity">
 							<span class="radio__disc"></span>
-							выше 30%
+							<span class="radio__desc">выше&nbsp;30%</span>
 						</label>
 					</div>
 				</fieldset>
@@ -280,7 +267,7 @@
 					</div>
 					<h3 class="goods__title">
 						<a href="#" class="goods__link link" aria-label="ice-cream coffe">
-							<span class="goods__text">Сливочно-кофейное с кусочками шоколада</span>
+							<span class="goods__text">Сливочно-кофейное с кусочками&nbsp;шоколада</span>
 						</a>
 					</h3>
 					<button class="goods__button button" type="button" name="button">
@@ -437,7 +424,9 @@
 						<span class="button__text">Быстрый просмотр</span>
 					</button>
 				</article>
-				<ul class="goods__pagination pagination">
+			</div>
+			<ul class="pagination">
+				<div class="pagination__container">
 					<li class="pagination__item pagination__item_previous">
 						<a class="pagination__link link" aria-label="previous">
 							<img class="pagination__img" src="img/icons/icon-right-small.svg" alt="Предыдущая страница" width="11" height="11">
@@ -458,51 +447,56 @@
 					<li class="pagination__item">
 						<a class="pagination__link link" href="#" aria-label="new-page">5</a>
 					</li>
-					<li class="pagination__item pagination__item">
+					<li class="pagination__item pagination__item_next">
 						<a class="pagination__link link" href="#" aria-label="next">
 							<img class="pagination__img" src="img/icons/icon-right-small.svg" alt="Следущая страница" width="11" height="11">
 						</a>
 					</li>
-				</ul>
-			</div>
+				</div>
+			</ul>
 		</main>
 		<footer class="footer container">
 			<ul class="footer__social social">
 				<li class="social__item">
 					<a class="social__link" aria-label="twitter" href="#">
-						<img class="social__img" src="img/icons/twitter.svg" alt="Читайте о мороженом в твитере" width="33" height="33">
+						<img class="social__img" src="img/icons/twitter.svg" alt="Читайте о мороженом в твитере" width="35" height="35">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="instagram" href="#">
-						<img class="social__img" src="img/icons/instagram.svg" alt="Подпишитесь на нас в instagram" width="33" height="33">
+						<img class="social__img" src="img/icons/instagram.svg" alt="Подпишитесь на нас в instagram" width="35" height="35">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="facebook" href="#">
-						<img class="social__img" src="img/icons/fb.svg" alt="Следите за нами в facebook" width="33" height="33">
+						<img class="social__img" src="img/icons/fb.svg" alt="Следите за нами в facebook" width="35" height="35">
 					</a>
 				</li>
 				<li class="social__item">
 					<a class="social__link" aria-label="vkontakte" href="#">
-						<img class="social__img" src="img/icons/vk.svg" alt="Следите за нами в вконтакте" width="33" height="33">
+						<img class="social__img" src="img/icons/vk.svg" alt="Следите за нами в вконтакте" width="35" height="35">
 					</a>
 				</li>
 			</ul>
 			<div class="footer__information information">
 					<div class="information__item">
 						<a href="#" class="information__link link" aria-label="about-me">
-							<strong>Для поставщиков</strong>
+							<strong class="informaton__text">Для&nbsp;поставщиков</strong>
 						</a>
 					</div>
 					<div class="information__item">
-						<a href="#" class="information__link link" aria-label="production">О производстве</a>
+						<a href="#" class="information__link link" aria-label="documents">
+							<span class="informaton__text"> Наши&nbsp;документы</span>
+						</a>
 					</div>
 					<div class="information__item">
-						<a href="#" class="information__link link" aria-label="documents">Наши документы</a>
+						<a href="#" class="information__link link" aria-label="production">
+							<span class="informaton__text">О&nbsp;производстве</span>
+						</a>
 					</div>
 					<div class="information__item">
-						<a href="#" class="information__link link">Экологические стандарты</a>
+						<a href="#" class="information__link link">
+							<span class="informaton__text"> Экологические&nbsp;стандарты</a></span>
 					</div>
 			</div>
 			<div class="footer__copyright copyright">
