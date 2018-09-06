@@ -274,9 +274,9 @@ body {
 	color: #ffffff;
 }
 
-.site-nav__link:hover {
+.site-nav__item:hover .site-nav__link {
 	color: #323232;
-	background-color: #fff;
+	background-color: #f7f6f3;
 	padding: 7px 14px;
 	border-radius: 50px;
 }
@@ -311,7 +311,7 @@ body {
 	background-color: transparent;
 }
 
-.site-nav__link_active:hover {
+.site-nav__item:hover .site-nav__link_active {
 	color: #fff;
 	background-color: #d07058;
 	padding: 7px 14px;
@@ -525,13 +525,13 @@ body {
 	border: none;
 }
 
-.user-nav__button:hover {
+.user-nav__item:hover .user-nav__button {
 	color: #323232;
-	background-color: #f8f7f4;
+	background-color: #f7f6f3;
 }
 
 .user-nav__button_active {
-	background-color: #fff;
+	background-color: #f7f6f3;
 	color: #323232;
 }
 
@@ -548,7 +548,7 @@ body {
 	padding: 0;
 }
 
-.user-nav__button_search:hover {
+.user-nav__item:hover:hover .user-nav__button_search {
 	background-image: url(../img/icons/loupe.svg);
 }
 
@@ -563,7 +563,7 @@ body {
 	padding: 6px 16px 10px 21px;
 }
 
-.user-nav__button_login:hover {
+.user-nav__item:hover .user-nav__button_login {
 	background-image: url(../img/icons/login.svg);
 }
 
@@ -616,7 +616,7 @@ body {
 	margin-left: -3px;
 }
 
-.user-nav__button_basket:hover {
+.user-nav__item:hover .user-nav__button_basket {
 	background-image: url(../img/icons/basket.svg);
 }
 
@@ -710,6 +710,7 @@ body {
 
 .filter__list:last-child {
 	margin-bottom: 0px;
+	margin-right: 14px;
 }
 
 .filter__title {
