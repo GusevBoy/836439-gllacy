@@ -1,20 +1,3 @@
-@font-face {
-	font-family: "Roboto";
-	font-weight: 400;
-	src: url("fonts/web/roboto.woff2") format("woff2")
-}
-
-@font-face {
-	font-family: "Roboto";
-	font-weight: 700;
-	src: url("fonts/web/robotobold.woff2") format("woff2")
-}
-
-@font-face {
-	font-family: "Roboto";
-	font-weight: 500;
-	src: url("fonts/web/robotomedium.woff2") format("woff2")
-}
 
 .hidden{
 	display: none;
