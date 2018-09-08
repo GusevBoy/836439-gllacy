@@ -8,138 +8,137 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 	</head>
 	<body>
-			<header class="header">
-				<div class="header__container container">
-					<a class="header__logo-wrapper" aria-label="Главная страница">
-						<img class="header__logo" src="img/icons/logo.svg" alt="Добро пожаловать в Gllacy Shop" width="154" height="64" >
-					</a>
-					<nav class="header__main-nav">
-						<ul class="header__site-nav site-nav">
-							<li class="site-nav__item site-nav__item-goods">
-								<span class="site-nav__link">Каталог</span>
-								<div class="site-nav__container">
-									<ul class="site-nav__popup popup">
-										<li class="popup__item">
-											<a class="popup__link" href="#" aria-label="novelties">
-												<strong>Новинки</strong>
-											</a>
-										</li>
-										<li class="popup__item">
-											<a class="popup__link" href="catalog.html" aria-label="milks">Сливочные</a>
-										</li>
-										<li class="popup__item">
-											<a class="popup__link" href="#" aria-label="scrubbings">Щербеты</a>
-										</li>
-										<li class="popup__item">
-											<a class="popup__link" href="#" aria-label="fruit-ice">Фруктовый&nbsp;лед</a>
-										</li>
-										<li class="popup__item">
-											<a class="popup__link" href="#" aria-label="melorin">Мелорин</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class="site-nav__item">
-								<a class="site-nav__link" href="#" aria-label="payment-info">Доставка и оплата</a>
-							</li>
-							<li class="site-nav__item">
-								<a class="site-nav__link" href="#" aria-label="about-me">О Компании</a>
-							</li>
-						</ul>
-						<ul class="header__user-nav user-nav">
-							<li class="user-nav__item">
-								<button class="user-nav__button user-nav__button_search">
-								</button>
-								<div class="user-nav__container">
-									<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get">
+		<header class="header container">
+			<div class="header__container"
+				<a class="header__logo-wrapper" aria-label="Главная страница">
+					<img class="header__logo" src="img/icons/logo.svg" alt="Добро пожаловать в Gllacy Shop" width="154" height="64" >
+				</a>
+				<nav class="header__main-nav">
+					<ul class="header__site-nav site-nav">
+						<li class="site-nav__item site-nav__item-goods">
+							<span class="site-nav__link">Каталог</span>
+							<div class="site-nav__container">
+								<ul class="site-nav__popup popup">
+									<li class="popup__item">
+										<a class="popup__link" href="#" aria-label="novelties">
+											<strong>Новинки</strong>
+										</a>
+									</li>
+									<li class="popup__item">
+										<a class="popup__link" href="catalog.html" aria-label="milks">Сливочные</a>
+									</li>
+									<li class="popup__item">
+										<a class="popup__link" href="#" aria-label="scrubbings">Щербеты</a>
+									</li>
+									<li class="popup__item">
+										<a class="popup__link" href="#" aria-label="fruit-ice">Фруктовый&nbsp;лед</a>
+									</li>
+									<li class="popup__item">
+										<a class="popup__link" href="#" aria-label="melorin">Мелорин</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="site-nav__item">
+							<a class="site-nav__link" href="#" aria-label="payment-info">Доставка и оплата</a>
+						</li>
+						<li class="site-nav__item">
+							<a class="site-nav__link" href="#" aria-label="about-me">О Компании</a>
+						</li>
+					</ul>
+					<ul class="header__user-nav user-nav">
+						<li class="user-nav__item user-nav__item_search">
+							<button class="user-nav__button user-nav__button_search">
+							</button>
+							<div class="user-nav__container">
+								<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get">
+								<label class="form__label">
+									<span class="form__desc hidden">Search</span>
+										<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
+								</label>
+							</form>
+							</div>
+						</li>
+						<li class="user-nav__item">
+							<button class="user-nav__button user-nav__button_login">Вход
+							</button>
+							<div class="user-nav__container">
+								<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
 									<label class="form__label">
-										<span class="form__desc hidden">Search</span>
-											<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
+										<span class="form__desc hidden">Email</span>
+										<input class="form__input" type="email" name="email" placeholder="Электронная почта">
 									</label>
-								</form>
-								</div>
-							</li>
-							<li class="user-nav__item">
-								<button class="user-nav__button user-nav__button_login">
-									<span class="user-nav__desc">Вход</span>
-								</button>
-								<div class="user-nav__container">
-									<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
-										<label class="form__label">
-											<span class="form__desc hidden">Email</span>
-											<input class="form__input" type="email" name="email" placeholder="Электронная почта">
-										</label>
-										<label class="form__label">
-											<span class="form__desc hidden">Password</span>
-											<input class="form__input" type="password" name="password" placeholder="Пароль">
-										</label>
-										<div class="flex__container">
-											<button class="form__button button" type="submit" name="button-login">Войти</button>
-											<ul class="user-nav__registration registration">
-												<li class="registration__item">
-													<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
-												</li>
-												<li class="registration__item">
-													<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
-												</li>
-											</ul>
-										</div>
-									</form>
-								</div>
-							</li>
-							<li class="user-nav__item">
-								<button class="user-nav__button user-nav__button_basket">
-									<span class="user-nav__desc">Пусто</span>
-								</button>
-								<div class="user-nav__container hidden">
-									<div class="user-nav__popup popup">
-										<div class="popup__order order">
-											<div class="order__row">
-												<div class="order__desc">
-													<button class="order__button" type="button" name="button">
-														<img class="order__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
-													</button>
-													<img class="order__ice-cream" src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом" width="33" height="33">
-													<span class="order__name">Пломбир с апельсиновым джемом</span>
-												</div>
-												<div class="order__price">
-													<span class="order__weight">1.5кг&nbsp;x</span>
-													<span class="order__value">200руб</span>
-													<span class="order__total-price">300руб</span>
-												</div>
-											</div>
-											<div class="order__row">
-												<div class="order__desc">
-													<button class="order__button" type="button" name="button">
-														<img class="order__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
-													</button>
-													<img class="order__ice-cream" src="img/ice-cream/strawberry.jpg" alt="Сливочно-кофейное мороженое" width="33" height="33">
-													<span class="order__name">Клубничный пломбир с присыпкой из белого шоколада</span>
-												</div>
-												<div class="order__price">
-													<span class="order__weight">1,5кг&nbsp;x</span>
-													<span class="order__value">300руб</span>
-													<span class="order__total-price">450руб</span>
-												</div>
-											</div>
-											<footer class="order__footer">
-												<span class="order__total-sum">Итого: 750 руб.</span>
-											</footer>
-										</div>
-
-										<a class="user-nav__link button" href="orders.html" aria-label="checkout">Оформить заказ</a>
+									<label class="form__label">
+										<span class="form__desc hidden">Password</span>
+										<input class="form__input" type="password" name="password" placeholder="Пароль">
+									</label>
+									<div class="flex__container">
+										<button class="form__button button" type="submit" name="button-login">Войти</button>
+										<ul class="user-nav__registration registration">
+											<li class="registration__item">
+												<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
+											</li>
+											<li class="registration__item">
+												<a class="registration__link link" href="#" aria-label="registration">Новая регистрация</a>
+											</li>
+										</ul>
 									</div>
+								</form>
+							</div>
+						</li>
+						<li class="user-nav__item">
+							<button class="user-nav__button user-nav__button_basket">Пусто
+							</button>
+							<div class="user-nav__container hidden">
+								<div class="user-nav__popup popup">
+									<div class="popup__order order">
+										<div class="order__row">
+											<div class="order__desc">
+												<button class="order__button" type="button" name="button">
+													<img class="order__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
+												</button>
+												<img class="order__ice-cream" src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом" width="33" height="33">
+												<span class="order__name">Пломбир с апельсиновым джемом</span>
+											</div>
+											<div class="order__price">
+												<span class="order__weight">1.5кг&nbsp;x</span>
+												<span class="order__value">200руб</span>
+												<span class="order__total-price">300руб</span>
+											</div>
+										</div>
+										<div class="order__row">
+											<div class="order__desc">
+												<button class="order__button" type="button" name="button">
+													<img class="order__icon-cross" src="img/icons/cross-big.svg" alt="Удалить товар" width="11" height="11">
+												</button>
+												<img class="order__ice-cream" src="img/ice-cream/strawberry.jpg" alt="Сливочно-кофейное мороженое" width="33" height="33">
+												<span class="order__name">Клубничный пломбир с присыпкой из белого шоколада</span>
+											</div>
+											<div class="order__price">
+												<span class="order__weight">1,5кг&nbsp;x</span>
+												<span class="order__value">300руб</span>
+												<span class="order__total-price">450руб</span>
+											</div>
+										</div>
+										<footer class="order__footer">
+											<span class="order__total-sum">Итого: 750 руб.</span>
+										</footer>
+									</div>
+
+									<a class="user-nav__link button" href="orders.html" aria-label="checkout">Оформить заказ</a>
 								</div>
-							</li>
-						</ul>
-					</nav>
-					<div class="header__contacts contacts">
-						<h2 class="contacts__title hidden">Контактная информация</h2>
-						<span class="contacts__work-time_right">С 10 до 20, ежедневно</span>
-						<span class="contacts__phone">8 812 450-25-25</span>
-					</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__contacts contacts">
+					<h2 class="contacts__title hidden">Контактная информация</h2>
+					<span class="contacts__work-time_right">С 10 до 20, ежедневно</span>
+					<span class="contacts__phone">8 812 450-25-25</span>
 				</div>
-			</header>
+			</div>
+		</header>
+		<main class="main__container container">
 			<div class="slider">
 				<div class="slide slide-1">
 					<img class="slide__img" src="img/content/ice-cream_1.png" width="1054" height="881" alt="Два аппетитных рожка с мороженым">
@@ -183,16 +182,15 @@
 					</label>
 				</div>
 			</div>
-		<main class="main__container container">
 			<div class="news">
-				<div class="news__item theme theme_raspberry">
+				<div class="news__item news__item_raspberry">
 					<h2 class="news__title title">Малинка даром!</h2>
 					<p class="news__subtitle subtitle">
 						При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
 					</p>
 					<a href="#" aria-label="Возьми малину" class="news__link button">Хочу варенье!</a>
 				</div>
-				<div class="news__item theme theme_chocolate">
+				<div class="news__item news__item_chocolate">
 					<h2 class="news__title title">Шоколадки даром!</h2>
 					<p class="news__subtitle subtitle">
 						При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
