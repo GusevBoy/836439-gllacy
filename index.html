@@ -9,7 +9,6 @@
 	</head>
 	<body>
 			<header class="header">
-				<!-- Если уберу href выполню требование 3.11. Логотип не является ссылкой? -->
 				<div class="header__container container">
 					<a class="header__logo-wrapper" aria-label="Главная страница">
 						<img class="header__logo" src="img/icons/logo.svg" alt="Добро пожаловать в Gllacy Shop" width="154" height="64" >
@@ -55,30 +54,27 @@
 									<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get">
 									<label class="form__label">
 										<span class="form__desc hidden">Search</span>
-											<input class="form__input" type="text" name="Search" placeholder="Что ищем?" autocomplete="off">
+											<input class="form__input" type="text" name="Search" placeholder="Что ищем?">
 									</label>
 								</form>
 								</div>
 							</li>
 							<li class="user-nav__item">
 								<button class="user-nav__button user-nav__button_login">
-									<!-- Картинка добавляется через фон -->
 									<span class="user-nav__desc">Вход</span>
 								</button>
-								<!-- Коонтейнер специально для псевдоэлемента, что бы не большая прослойка была -->
 								<div class="user-nav__container">
-									<!-- Можно ли так? Сдела специально так как ширина отличается -->
 									<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
 										<label class="form__label">
 											<span class="form__desc hidden">Email</span>
-											<input class="form__input" type="email" name="email" placeholder="Электронная почта" autocomplete="off">
+											<input class="form__input" type="email" name="email" placeholder="Электронная почта">
 										</label>
 										<label class="form__label">
 											<span class="form__desc hidden">Password</span>
 											<input class="form__input" type="password" name="password" placeholder="Пароль">
 										</label>
 										<div class="flex__container">
-											<button class="form__button button" type="submit" name="button-login">Войти</button> <!-- Надо подумать над классами, как правильнее с точки зрения стилизации -->
+											<button class="form__button button" type="submit" name="button-login">Войти</button>
 											<ul class="user-nav__registration registration">
 												<li class="registration__item">
 													<a class="registration__link link" href="#" aria-label="password-recovery">Забыли пароль?</a>
@@ -121,7 +117,7 @@
 													<span class="order__name">Клубничный пломбир с присыпкой из белого шоколада</span>
 												</div>
 												<div class="order__price">
-													<span class="order__weight">1,5кг&nbsp;x</span> <!-- Крестик будет добавлен через фон -->
+													<span class="order__weight">1,5кг&nbsp;x</span>
 													<span class="order__value">300руб</span>
 													<span class="order__total-price">450руб</span>
 												</div>
@@ -144,7 +140,7 @@
 					</div>
 				</div>
 			</header>
-			<div class="slider container">
+			<div class="slider">
 				<div class="slide slide-1">
 					<img class="slide__img" src="img/content/ice-cream_1.png" width="1054" height="881" alt="Два аппетитных рожка с мороженым">
 					<div class="slide__container">
@@ -205,11 +201,13 @@
 				</div>
 			</div>
 			<div class="goods-top">
-				<article class="goods__item goods__item_hit">
-					<img src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом " class="goods__img" width="267" height="267">
-					<div class="goods__price">
-						<span class="goods__value">310</span>
-						<span class="goods__weight">/кг</span> <!-- Рубль добавлен будет через фон -->
+				<article class="goods__item">
+					<div class="goods__card goods__card_hit">
+						<img src="img/ice-cream/orange.jpg" alt="Мороженое с апельсиновым джемом " class="goods__img" width="267" height="267">
+						<div class="goods__price">
+							<span class="goods__value">310</span>
+							<span class="goods__weight">/кг</span>
+						</div>
 					</div>
 					<h3 class="goods__title">
 						<a href="#" class="goods__link link" aria-label="ice-cream orange">
@@ -220,11 +218,13 @@
 						<span class="button__text">Быстрый просмотр</span>
 					</button>
 				</article>
-				<article class="goods__item goods__item_hit">
-					<img src="img/ice-cream/coffee.jpg" alt="Сливочно-кофейное мороженое" class="goods__img" width="267" height="267">
-					<div class="goods__price">
-						<span class="goods__value">380</span>
-						<span class="goods__weight">/кг</span>
+				<article class="goods__item">
+					<div class="goods__card goods__card_hit">
+						<img src="img/ice-cream/coffee.jpg" alt="Сливочно-кофейное мороженое" class="goods__img" width="267" height="267">
+						<div class="goods__price">
+							<span class="goods__value">380</span>
+							<span class="goods__weight">/кг</span>
+						</div>
 					</div>
 					<h3 class="goods__title">
 						<a href="#" class="goods__link link" aria-label="ice-cream coffe">
@@ -235,11 +235,13 @@
 						<span class="button__text">Быстрый просмотр</span>
 					</button>
 				</article>
-				<article class="goods__item goods__item_hit">
-					<img src="img/ice-cream/strawberry.jpg" alt="Сливочно-клубничное мороженое" class="goods__img" width="267" height="267">
-					<div class="goods__price">
-						<span class="goods__value">355</span>
-						<span class="goods__weight">/кг</span>
+				<article class="goods__item">
+					<div class="goods__card goods__card_hit">
+						<img src="img/ice-cream/strawberry.jpg" alt="Сливочно-клубничное мороженое" class="goods__img" width="267" height="267">
+						<div class="goods__price">
+							<span class="goods__value">355</span>
+							<span class="goods__weight">/кг</span>
+						</div>
 					</div>
 					<h3 class="goods__title">
 						<a href="#" class="goods__link link" aria-label="ice-cream strawberry">
@@ -250,11 +252,13 @@
 						<span class="button__text">Быстрый просмотр</span>
 					</button>
 				</article>
-				<article class="goods__item goods__item_hit">
-					<img src="img/ice-cream/cream-brulee.jpg" alt="Мороженое сливочное крем-брюле" class="goods__img" width="267" height="267">
-					<div class="goods__price">
-						<span class="goods__value">415</span>
-						<span class="goods__weight">/кг</span>
+				<article class="goods__item">
+					<div class="goods__card goods__card_hit">
+						<img src="img/ice-cream/cream-brulee.jpg" alt="Мороженое сливочное крем-брюле" class="goods__img" width="267" height="267">
+						<div class="goods__price">
+							<span class="goods__value">415</span>
+							<span class="goods__weight">/кг</span>
+						</div>
 					</div>
 					<h3 class="goods__title">
 						<a href="#" class="goods__link link" aria-label="ice-cream cream-brulee">
@@ -268,10 +272,10 @@
 			</div>
 			<section class="facts">
 				<h2 class="facts__title title">
-					Магазин Глэйси — это онлайн&#8209; и офлайн&#8209;магазин по продаже мороженого&nbsp;собственногпроизводствеа на развес
+					Магазин Глэйси — это онлайн&#8209; и офлайн&#8209;магазин по продаже мороженого&nbsp;собственного производствеа на развес
 				</h2>
 				<ul class="facts__list">
-					<li class="facts__item facts__item_ice"> <!--  А так можно ? -->
+					<li class="facts__item facts__item_ice">
 						Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
 					</li>
 					<li class="facts__item facts__item_cow">
@@ -297,7 +301,7 @@
 				<div class="subscribe">
 					<p class="subscribe__desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
 					<form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
-						<label class="form__label">
+						<label class="subscribe__label">
 							<input class="subscribe__input" type="email" name="subscribe-email" placeholder="Электронная почта">
 						</label>
 						<button class="subscribe__button button" type="submit" name="button-send">Отправить</button>
@@ -306,8 +310,6 @@
 			</div>
 		</main>
 		<div class="map">
-			<!-- Решил сделать внутрений контейнер, вопервых что бы спозиционировать контактную информацию,
-		во вторых для картинки, если джска не загрузится (картинку спрятать можно если что) -->
 			<div class="map__container">
 				<img class="map__img" src="img/theme/map.jpg" alt="Мороженое с апельсиновым джемом " width="1200" height="430">
 				<section class="map__contacts contacts">
@@ -322,7 +324,6 @@
 				<div class="map__marker"></div>
 			</div>
 		</div>
-		<!-- как сделать модальное окно? -->
 		<form class="feedback hidden" action="https://echo.htmlacademy.ru" method="get">
 			<h2 class="feedback__title">Мы обязательно вам ответим!</h2>
 			<input type="text" class="feedback__input" name="name" placeholder="Как вас зовут?">

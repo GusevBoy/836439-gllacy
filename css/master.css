@@ -12,6 +12,7 @@ body {
 	font-weight: 400;
 	padding-top: 98px;
 	margin: 0;
+	min-width: 900px;
 }
 
 .main {
@@ -22,7 +23,7 @@ body {
 	box-sizing: border-box;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 27px;
+	padding: 0 2.2222222222%;
 }
 
 .flex__container {
@@ -72,15 +73,6 @@ body {
 	color: #ffbc9e;
 }
 
-/*как сделать красивые подчеркивание, для однострочного текста можно через after, но а если строк больше ?*/
-/* .link::after {
-	content: '';
-	display: inline-block;
-	height: 1px;
-	width: 100%;
-	background-color: rgba(255, 255, 255, 0.2)
-} */
-
 .form {
 	background-color: #f8f7f4;
 	border-radius: 5px;
@@ -120,6 +112,7 @@ body {
 .registration__link {
 	position: relative;
 	display: inline-block;
+	vertical-align: top;
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 24px;
@@ -259,9 +252,6 @@ body {
 	padding-bottom: 8px;
 }
 
-/*Решил не задавать логотипу margin-right: 24px; а задать всего 10px,
-остальные 10px я задаю в качестве паддингов у site-nav__link, это позволяет нам спокойно навешевать класс site-nav__link_active
-и при этом активный элемент не влияет на окружающие элементы, для примера попробуй поиграться с site-nav__link_active, повесить на другой элемент*/
 .site-nav__link {
 	display: block;
 	text-decoration: none;
@@ -327,7 +317,7 @@ body {
 }
 
 .site-nav__container {
-	z-index: 1; /*Что бы контакты перекрыл*/
+	z-index: 1;
 	left: -7px;
 	top: 38px;
 	z-index: 1;
@@ -348,7 +338,6 @@ body {
 .site-nav__popup {
 	padding-left: 0;
 	list-style: none;
- /*Элементы rage стоят выше по этому поставил данное свойство*/
 }
 
 .popup {
@@ -505,6 +494,7 @@ body {
 .user-nav__link {
 	text-decoration: none;
 	display: inline-block;
+	vertical-align: middle;
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 24px;
@@ -643,7 +633,7 @@ body {
 .header__contacts {
 	color: #fff;
 	position: absolute;
-	right: 27px;
+	right: 2.2222222222%;
 	top: 100%;
 	margin-top: -4px;
 }
@@ -677,6 +667,7 @@ body {
 	line-height: 16px;
 	text-decoration: none;
 	display: inline-block;
+	vertical-align: bottom;
 }
 
 .breadcrumbs__link::after {
@@ -706,6 +697,10 @@ body {
 	border: 0;
 	padding: 0;
 	margin: 0 16px 16px 0;
+}
+
+.filter__list:nth-child(4) {
+	margin-right: 0;
 }
 
 .filter__list:last-child {
@@ -807,6 +802,7 @@ padding: 0px 22px 3px 14px;;
 
 .radio__label {
 	display: inline-block;
+	vertical-align: middle;
 	margin-right: 22px;
 	position: relative;
 }
@@ -846,7 +842,6 @@ padding: 0px 22px 3px 14px;;
 	vertical-align: middle;
 }
 
-/*Все заблокированые кнопки с прозрачностью*/
 .radio__input:checked + .radio__disc {
 	border-color: #fff;
 }
@@ -881,6 +876,7 @@ padding: 0px 22px 3px 14px;;
 .checkbox__square,
 .checkbox__desc {
 	display: inline-block;
+	vertical-align: top;
 }
 
 .checkbox__label {
@@ -931,6 +927,7 @@ padding: 0px 22px 3px 14px;;
 	order: 99;
 	color: #fff;
 	display: inline-block;
+	vertical-align: bottom;
 	width: 144px;
 	height: 37px;
 	background-color: rgba(255, 255, 255, 0.2);
@@ -969,15 +966,19 @@ padding: 0px 22px 3px 14px;;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 0 -13px;
-	margin-bottom: -43px;
+	margin-bottom: -3.666641%;
 }
 
 .goods__item {
 	position: relative;
 	box-sizing: border-box;
 	width: 25%;
-	margin-bottom: -49px; /*Для того, что бы при ховере элемент был выше ниже стоящих*/
+	margin-bottom: -49px;
 	padding: 6px 14px 0 13px;
+}
+
+.goods__card {
+	position: relative;
 }
 
 .goods-top .goods__item {
@@ -991,7 +992,7 @@ padding: 0px 22px 3px 14px;;
 	z-index: 9;
 }
 
-.goods__item_hit::before {
+.goods__card_hit::before {
 	content: '';
 	position: absolute;
 	background-image: url(../img/icons/hit.svg);
@@ -1000,14 +1001,14 @@ padding: 0px 22px 3px 14px;;
 	background-size: contain;
 	width: 61px;
 	height: 61px;
-	left: 12px;
+	left: 0px;
 }
 
 .goods__price {
 	z-index: 1;
 	position: absolute;
-	top: 213px;
-	left: 12px;
+	bottom: 2%;
+	left: 0%;
 }
 
 .goods__value {
@@ -1033,17 +1034,18 @@ padding: 0px 22px 3px 14px;;
 	display: block;
 	border-radius: 53% 52%;
 	margin: 0px auto 13px auto;
+	width: 100%;
+	height: auto;
 }
 
 .goods__title {
-	  font-size: 17px;
-	  font-weight: 500;
-	  line-height: 21px;
-	  letter-spacing: -0.5px;
-	  text-align: center;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 21px;
+	letter-spacing: -0.5px;
+	text-align: center;
 	color: #ffffff;
 	margin: 0;
-	/* padding: 0 10px; */ /*в макете паддинг есть, но если делать по макету получается не очень*/
 	margin-bottom: 11px;
 }
 
@@ -1144,6 +1146,7 @@ padding: 0px 22px 3px 14px;;
 .social__item {
 	opacity: 0.8;
 	display: inline-block;
+	vertical-align: bottom;
 	margin-right: 6px;
 }
 
@@ -1220,13 +1223,11 @@ padding: 0px 22px 3px 14px;;
 	text-decoration: none;
 }
 
-/*----------------/*Slider*/
-
 .slider {
 	position: relative;
 	text-align: center;
-	margin-top: -98px;
-	margin-bottom: -237px;
+	max-width: 1200px;
+	margin: -98px auto -237px auto;
 }
 
 .slider__label {
@@ -1235,8 +1236,18 @@ padding: 0px 22px 3px 14px;;
 
 .slider__controls {
 	position: absolute;
-	left: 32px;
+	left: 2.7%;
 	top: 63.6%;
+}
+
+.slide {
+
+	overflow: hidden;
+}
+
+.slide__img {
+	margin-left: -200px;
+	margin-right: -200px;
 }
 
 .slider__input {
@@ -1247,6 +1258,7 @@ padding: 0px 22px 3px 14px;;
 
 .slider__disc {
 	position: relative;
+	vertical-align: middle;
 	display: inline-block;
 	top: 1px;
 	left: -7px;
@@ -1295,11 +1307,11 @@ padding: 0px 22px 3px 14px;;
 .slide__text {
 	display: block;
 	width: 100%;
-  font-family: Roboto;
-  font-size: 60px;
-  font-weight: 700;
+	font-family: Roboto;
+	font-size: 60px;
+	font-weight: 700;
 	line-height: 61px;
-  color: #ffffff;
+	color: #ffffff;
 	margin-bottom: 39px;
 }
 
@@ -1318,8 +1330,8 @@ padding: 0px 22px 3px 14px;;
 	width: 48.95%;
 	padding: 23px 20px;
 	padding-left: 19px;
-  padding-top: 14px;
-	padding-bottom: 90px;
+	padding-top: 14px;
+	padding-bottom: 7.8%;
 	box-sizing: border-box;
 	text-align: right;
 	border-radius: 16px;
@@ -1327,7 +1339,6 @@ padding: 0px 22px 3px 14px;;
 
 .theme_raspberry,
 .theme_chocolate {
-	background-image: url(../img/theme/razz.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1335,10 +1346,12 @@ padding: 0px 22px 3px 14px;;
 }
 
 .theme_raspberry {
+	background-color: #AC3950;
 	background-image: url(../img/theme/razz.jpg);
 }
 
 .theme_chocolate {
+	background-color: #65483A;
 	background-image: url(../img/theme/chocolate.jpg);
 }
 
@@ -1357,15 +1370,15 @@ padding: 0px 22px 3px 14px;;
 }
 
 .news__subtitle {
-	  font-size: 18px;
-	  font-weight: 700;
-	  font-style: normal;
-	  font-stretch: normal;
-	  line-height: 21px;
-	  letter-spacing: normal;
-	  text-align: left;
-	  color: #ffffff;
-		margin-bottom: 25px;
+	font-size: 18px;
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 21px;
+	letter-spacing: normal;
+	text-align: left;
+	color: #ffffff;
+	margin-bottom: 25px;
 }
 
 .news__link {
@@ -1389,6 +1402,7 @@ padding: 0px 22px 3px 14px;;
 .facts {
 	box-sizing: border-box;
 	width: 100%;
+	background-color: #f0e7d4;
 	background-image: url(../img/theme/waffle.jpg);
 	background-position: right;
 	background-repeat: repeat;
@@ -1419,7 +1433,7 @@ padding: 0px 22px 3px 14px;;
 }
 
 .facts__item {
-	min-width: 535px;
+	min-width: 48.65%;
 	position: relative;
 	box-sizing: border-box;
 	font-size: 16px;
@@ -1524,6 +1538,11 @@ padding: 0px 22px 3px 14px;;
 	padding-top: 26px;
 }
 
+.subscribe__label {
+	width: 68.7%;
+	margin-right: 11px;
+}
+
 .subscribe__desc {
 	font-size: 16px;
 	line-height: 22px;
@@ -1541,7 +1560,7 @@ padding: 0px 22px 3px 14px;;
 
 .subscribe__input {
 	box-sizing: border-box;
-	min-width: 368px;
+	width: 100%;
 	padding: 12px 15px;
 	border-radius: 5px;
 	border-width: 1px;
@@ -1571,6 +1590,7 @@ padding: 0px 22px 3px 14px;;
 	margin: 0 auto;
 	position: relative;
 	max-width: 1200px;
+	overflow: hidden;
 }
 
 .map__contacts {
@@ -1587,7 +1607,7 @@ padding: 0px 22px 3px 14px;;
 .map__marker {
 	position: absolute;
 	top: 32%;
-	left: 22%;
+	left: 265px;
 	background-image: url(../img/icons/pin.svg);
 	background-repeat: no-repeat;
 	background-position: center;
