@@ -31,7 +31,7 @@ body {
 	min-width: 900px;
 }
 
-.main {
+.main__container {
 	display: block;
 }
 
@@ -45,7 +45,7 @@ body {
 .flex__container {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 40px;
+	margin-bottom: 39px;
 	align-items: flex-start;
 }
 
@@ -172,7 +172,7 @@ body {
 	display: block;
 	font-size: 14px;
 	line-height: 20px;
-	margin-bottom: 3px;
+	margin-bottom: 1px;
 	text-align: left;
 }
 
@@ -184,8 +184,8 @@ body {
 	display: block;
 	font-size: 18px;
 	font-weight: 700;
-	margin-bottom: 20px;
-	line-height: 22px;
+	margin-bottom: 18px;
+	line-height: 24px;
 }
 
 .contacts__button {
@@ -231,7 +231,7 @@ body {
 	font-size: 18px;
 	font-weight: bold;
 	line-height: 22px;
-	margin-bottom: 4px;
+	margin-bottom: 5px;
 }
 
 .header__logo-wrapper {
@@ -764,6 +764,10 @@ body {
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
+}
+
+.filter__select::-ms-expand {
+	display: none;
 }
 
 .filter__select:hover {
@@ -1482,7 +1486,7 @@ body {
 	text-align: left;
 	width: 42.5%;
 	padding-top: 16px;
-	padding-left: 57px;
+	padding-left: 55px;
 
 }
 
@@ -1529,7 +1533,7 @@ body {
 	background-color: #fff;
 	background-image: url(../img/theme/strawberry2.jpg);
 	background-repeat: no-repeat;
-	background-size: initial;
+	background-size: cover;
 }
 
 .recipes__desc {
@@ -1581,7 +1585,7 @@ body {
 .subscribe__inner {
 	position: relative;
 	box-sizing: border-box;
-	padding: 26px 20px 34px 20px;
+	padding: 27px 20px 34px 22px;
 	margin: 4px 5px;
 	background-color: #f8f7f4;
 	border-radius: 10px;
@@ -1632,14 +1636,29 @@ body {
 
 .map {
 	width: 100%;
+	background-image: url(../img/theme/map.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 1200px 430px;
+	position: relative;
+	margin-bottom: -4px;
+}
+
+.map-google {
+	width: 100%;
+	border: 0;
 }
 
 .map__container {
 	display: block;
 	margin: 0 auto;
-	position: relative;
-	max-width: 1200px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -600px;
+	min-width: 1200px;
 	overflow: hidden;
+	min-height: 400px;
 }
 
 .map__contacts {
@@ -1650,7 +1669,7 @@ body {
 	background-color: #fff;
 	border-radius: 10px;
 	right: 27px;
-	bottom: 67px;
+	bottom: 34px;
 }
 
 .map__marker {
