@@ -39,7 +39,7 @@ body {
 	box-sizing: border-box;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 2.2%;
+	padding: 0 1.9%;
 }
 
 .flex__container {
@@ -313,8 +313,10 @@ body {
 
 .site-nav__link_active {
 	background-color: #d07058;
-
 	border-radius: 50px;
+	padding-top: 6PX;
+	padding-bottom: 6PX;
+	margin-top: 2PX;
 }
 
 .site-nav__link_active::after {
@@ -630,8 +632,6 @@ body {
 
 .user-nav__button_basket-red {
 	background-image: url(../img/icons/basket-red.svg);
-	padding: 8px 13px 8px 21px;
-	margin-left: -3px;
 }
 
 .user-nav__item:hover .user-nav__button_basket {
@@ -663,7 +663,7 @@ body {
 	position: absolute;
 	right: -1px;
 	top: 100%;
-	margin-top: -1px;
+	margin-top: -3px;
 }
 
 .breadcrumbs {
@@ -671,6 +671,7 @@ body {
 	list-style: none;
 	padding: 0;
 	font-size: 0;
+	margin-bottom: 2px;
 }
 
 .breadcrumbs__item {
@@ -683,7 +684,7 @@ body {
 .breadcrumbs__item::after {
 	display: inline;
 	content: "»";
-	padding: 0 7px;
+	padding: 0 5px;
 	color: #fff;
 }
 
@@ -751,12 +752,12 @@ body {
 	font-weight: 500;
 	line-height: 16px;
 	color: #fff;
-	margin: 0 0 6px 12px;
+	margin: 0 0 6px 14px;
 }
 
 .filter__select {
 	box-sizing: border-box;
-padding: 0px 22px 3px 14px;;
+	padding: 1px 34px 2px 14px;
 	color: #fff;
 	background-image: url(../img/icons/icon-down-dir.svg);
 	background-repeat: no-repeat;
@@ -906,7 +907,7 @@ padding: 0px 22px 3px 14px;;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 18px;
-	padding: 8px 27px 8px 18px;
+	padding: 7px 27px 8px 16px;
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -976,6 +977,7 @@ padding: 0px 22px 3px 14px;;
 	line-height: 1.13;
 	text-align: center;
 	color: #ffffff;
+	margin-left: -2px;
 }
 
 .filter__button:hover {
@@ -1011,7 +1013,7 @@ padding: 0px 22px 3px 14px;;
 	position: relative;
 	box-sizing: border-box;
 	width: 25%;
-	margin-bottom: -49px;
+	margin-bottom: -48px;
 	padding: 6px 14px 0 13px;
 }
 
@@ -1109,13 +1111,13 @@ padding: 0px 22px 3px 14px;;
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	margin-bottom: 47px;
+	margin-bottom: 33px;
 }
 
 .pagination__container {
 	font-size: 0;
 	margin-left: auto;
-	margin-right: -11px;
+	margin-right: -13px;
 }
 
 .pagination__item {
