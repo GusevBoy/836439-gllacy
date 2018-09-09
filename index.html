@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Глейси</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 		<link rel="stylesheet" href="css/master.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 	</head>
 	<body>
 		<header class="header container">
@@ -120,11 +120,10 @@
 												<span class="order__total-price">450руб</span>
 											</div>
 										</div>
-										<footer class="order__footer">
+										<div class="order__footer">
 											<span class="order__total-sum">Итого: 750 руб.</span>
-										</footer>
+										</div>
 									</div>
-
 									<a class="user-nav__link button" href="orders.html" aria-label="checkout">Оформить заказ</a>
 								</div>
 							</div>
@@ -144,27 +143,21 @@
 					<img class="slide__img" src="img/content/ice-cream_1.png" width="1054" height="881" alt="Два аппетитных рожка с мороженым">
 					<div class="slide__container">
 						<p class="slide__text">Крем-брюле и пломбир с малиновым джемом</p>
-						<a href="#" class="slider__link button">
-							<span class="button__text">Давайте оба!</span>
-						</a>
+						<a href="#" class="slider__link button">Давайте оба!</a>
 					</div>
 				</div>
 				<div class="slide slide-2 hidden">
 					<img class="slide__img" src="img/content/ice-cream_2.png" width="1054" height="881" alt="Два аппетитных рожка с мороженым">
 					<div class="slide__container">
 						<p class="slide__text">Шоколадный пломбир и лимонный сорбет</p>
-						<a href="#" class="slider__link button">
-							<span class="button__text">Давайте оба!</span>
-						</a>
+						<a href="#" class="slider__link button">Давайте оба!</a>
 					</div>
 				</div>
 				<div class="slide slide-3 hidden">
 					<img class="slider__img hidden" src="img/content/ice-cream_3.png" width="1054" height="881" alt="Два аппетитных рожка с мороженым">
 					<div class="slide__container">
 						<p class="slide__text">Пломбир с помадкой и клубничный щербет</p>
-						<a href="#" class="slider__link button">
-							<span class="button__text">Давайте оба!</span>
-						</a>
+						<a href="#" class="slider__link button">Давайте оба!</a>
 					</div>
 				</div>
 				<div class="slider__controls">
@@ -212,9 +205,7 @@
 							<span class="goods__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
 						</a>
 					</h3>
-					<button class="goods__button button" type="button" name="button">
-						<span class="button__text">Быстрый просмотр</span>
-					</button>
+					<button class="goods__button button" type="button" name="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods__item">
 					<div class="goods__card goods__card_hit">
@@ -229,9 +220,7 @@
 							<span class="goods__text">Сливочно-кофейное с кусочками шоколада</span>
 						</a>
 					</h3>
-					<button class="goods__button button" type="button" name="button">
-						<span class="button__text">Быстрый просмотр</span>
-					</button>
+					<button class="goods__button button" type="button" name="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods__item">
 					<div class="goods__card goods__card_hit">
@@ -246,9 +235,7 @@
 							<span class="goods__text">Сливочно-клубничное с присыпкой из белого шоколада</span>
 						</a>
 					</h3>
-					<button class="goods__button button" type="button" name="button">
-						<span class="button__text">Быстрый просмотр</span>
-					</button>
+					<button class="goods__button button" type="button" name="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods__item">
 					<div class="goods__card goods__card_hit">
@@ -263,9 +250,7 @@
 							<span class="goods__text">Сливочное крем-брюле с карамельной подливкой</span>
 						</a>
 					</h3>
-					<button class="goods__button button" type="button" name="button">
-						<span class="button__text">Быстрый просмотр</span>
-					</button>
+					<button class="goods__button button" type="button" name="button">Быстрый просмотр</button>
 				</article>
 			</div>
 			<section class="facts">
@@ -311,8 +296,8 @@
 		</main>
 		<div class="map">
 			<div class="map__container">
-				<img class="map__img" src="img/theme/map.jpg" alt="Мороженое с апельсиновым джемом " width="1200" height="430">
-				<section class="map__contacts contacts">
+				<img class="map__img" src="img/theme/map.jpg" alt="Наше расположение" width="1200" height="430">
+				<div class="map__contacts contacts">
 					<h2 class="contacts__title hidden">Контактная информация</h2>
 					<span class="contacts__desc-addres">Адрес главного офиса и&nbsp;офлайн&#8209;магазина:</span>
 					<span class="contacts__addres">ул. Большая Конюшенная 19/8,&nbsp;Санкт-Петербург</span>
@@ -320,7 +305,7 @@
 					<span class="contacts__phone contacts__phone_s">8 812 450-25-25</span>
 					<span class="contacts__work-time">(c 10 до 20,ежедневно )</span>
 					<button class="contacts__button button" type="button" name="button-communication">Форма обратной связи</button>
-				</section>
+				</div>
 				<div class="map__marker"></div>
 			</div>
 		</div>
@@ -365,7 +350,8 @@
 					</div>
 					<div class="information__item">
 						<a href="#" class="information__link link">
-							<span class="informaton__text"> Экологические&nbsp;стандарты</a></span>
+							<span class="informaton__text"> Экологические&nbsp;стандарты</span>
+						</a>
 					</div>
 			</div>
 			<div class="footer__copyright copyright">
@@ -379,8 +365,8 @@
 			</div>
 		</footer>
 		<div class="popup-feedback">
-				<h2 class="feedback__title">Мы обязательно вам ответим!</h2>
-				<span class="feedback__close"></span>
+			<h2 class="feedback__title">Мы обязательно вам ответим!</h2>
+			<span class="feedback__close"></span>
 			<form class="feedback" action="https://echo.htmlacademy.ru" method="post">
 				<input type="text" class="feedback__input" name="name" placeholder="Как вас зовут?">
 				<input type="email" class="feedback__input" name="email" placeholder="Ваша почта для ответа?" required>
