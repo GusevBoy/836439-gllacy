@@ -33,6 +33,7 @@ body {
 
 .main__container {
 	display: block;
+	position: relative;
 }
 
 .container {
@@ -1355,10 +1356,6 @@ body {
 	color: #ffffff;
 	margin: 0;
 	margin-bottom: 39px;
-}
-
-.main__container {
-	position: relative;
 }
 
 .news {
