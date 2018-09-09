@@ -279,10 +279,9 @@ body {
 	text-decoration: none;
 	color: #fff;
 	text-align: center;
-	padding: 7px 14px;
-	padding-top: 9px;
+	padding: 6px 14px;
 	font-size: 16px;
-	line-height: 20px;
+	line-height: 19px;
 	text-align: left;
 	color: #ffffff;
 }
@@ -290,14 +289,12 @@ body {
 .site-nav__item:hover .site-nav__link {
 	color: #323232;
 	background-color: #f7f6f3;
-	padding: 7px 14px;
 	border-radius: 50px;
 }
 
 .site-nav__link:active {
 	color: #323232;
 	background-color: #fff;
-	padding: 7px 14px;
 	border-radius: 50px;
 	background-color: #ededed;
 	box-shadow: inset 0px 2px 1px 0 #696969;
@@ -329,7 +326,6 @@ body {
 .site-nav__item:hover .site-nav__link_active {
 	color: #fff;
 	background-color: #d07058;
-	padding: 7px 14px;
 	border-radius: 50px;
 }
 
@@ -977,7 +973,6 @@ body {
 	line-height: 1.13;
 	text-align: center;
 	color: #ffffff;
-	margin-left: -2px;
 }
 
 .filter__button:hover {
@@ -1277,7 +1272,7 @@ body {
 
 .slider__controls {
 	position: absolute;
-	left: 2.2%%;
+	left: 2.2%;
 	top: 63.6%;
 }
 
@@ -1389,7 +1384,7 @@ body {
 	padding-left: 18px;
 	padding-top: 14px;
 	background-color: #AC3950;
-	background-image: url(../img/theme/razz.jpg);
+	background-image: url(../img/theme/raspberry.jpg);
 }
 
 .news__item_chocolate {
@@ -1576,12 +1571,20 @@ body {
 }
 
 .subscribe {
-	border-style: solid;
-	border-width: 6px;
-	border-image: url(../img/icons/bg-post.svg) 6;
+	background: url(../img/icons/subscribe-bg.png);
 	background-color: #f8f7f4;
 	margin: 0;
-	padding-top: 26px;
+	padding: 1px 0;
+}
+
+.subscribe__inner {
+	position: relative;
+	box-sizing: border-box;
+	padding: 26px 20px 34px 20px;
+	margin: 4px 5px;
+	background-color: #f8f7f4;
+	border-radius: 10px;
+	min-height: 210px;
 }
 
 .subscribe__label {
@@ -1660,21 +1663,37 @@ body {
 	width: 80px;
 }
 
-.feedback {
-	visibility: hidden;
+.popup-overlay {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.3);
+}
+
+.popup-overlay_show {
+	display: block;
+}
+
+.popup-feedback {
+	display: none;
+	z-index: 100;
 	position: fixed;
 	padding: 20px 25px;
 	background-color: #f8f7f4;
 	border-radius: 10px;
 	top: 0;
-	z-index: 3;
 	text-align: right;
 	top: 80px;
 	left: 50%;
 	margin-left: -250px;
 }
 
-.feedback_show {
+.popup-feedback_show {
 	display: block;
 	animation-name: bounce;
 	animation-duration: 0.6s;
@@ -1683,10 +1702,6 @@ body {
 .feedback__eror {
 	animation-name: shake;
 	animation-duration: 0.6s;
-}
-
-.feedback_active {
-	visibility: visible;
 }
 
 .feedback__title {

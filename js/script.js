@@ -1,7 +1,8 @@
 
 	var contacts__button = document.querySelector(".contacts__button");
-	var feedback = document.querySelector(".feedback");
-	var feedback__close = document.querySelector(".feedback__close");
+	var overlay = document.querySelector(".popup-overlay");
+	var feedback = document.querySelector(".popup-feedback");
+	var feedback__close = feedback.querySelector(".feedback__close");
 	var feedback__input = feedback.querySelector(".fedback__input");
 	var feedback__name = feedback.querySelector("[name=name]");
 	var feedback__email = feedback.querySelector("[name=email]");
@@ -9,22 +10,22 @@
 
 	contacts__button.addEventListener("click", function (evt) {
 		evt.preventDefault();
-		feedback.classList.add("feedback_active");
-		feedback.classList.add("feedback_show");
+		feedback.classList.add("popup-feedback_show");
+		overlay.classList.add("popup-overlay_show");
 		feedback__name.focus();
 	});
 	feedback__close.addEventListener("click", function (evt) {
 		evt.preventDefault();
-		feedback.classList.remove("feedback_active");
-		feedback.classList.remove("feedback_show");
+		feedback.classList.remove("popup-feedback_show");
+		overlay.classList.remove("popup-overlay_show");
 	});
 
 	window.addEventListener("keydown", function (evt) {
 		if (evt.keyCode === 27) {
 			evt.preventDefault();
-			feedback.classList.remove("feedback_active");
-			if (feedback.classList.contains("feedback_show")) {
-				feedback.classList.remove("feedback_show");
+			if (feedback.classList.contains("popup-feedback_show")) {
+				feedback.classList.remove("popup-feedback_show");
+				overlay.classList.remove("popup-overlay_show");
 			}
 		}
 	});

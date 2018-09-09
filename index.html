@@ -297,13 +297,15 @@
 					</h4>
 				</article>
 				<div class="subscribe">
-					<p class="subscribe__desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-					<form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
-						<label class="subscribe__label">
-							<input class="subscribe__input" type="email" name="subscribe-email" placeholder="Электронная почта">
-						</label>
-						<button class="subscribe__button button" type="submit" name="button-send">Отправить</button>
-					</form>
+					<div class="subscribe__inner">
+						<p class="subscribe__desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+						<form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
+							<label class="subscribe__label">
+								<input class="subscribe__input" type="email" name="subscribe-email" placeholder="Электронная почта">
+							</label>
+							<button class="subscribe__button button" type="submit" name="button-send">Отправить</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</main>
@@ -322,14 +324,6 @@
 				<div class="map__marker"></div>
 			</div>
 		</div>
-		<form class="feedback" action="https://echo.htmlacademy.ru" method="post">
-			<h2 class="feedback__title">Мы обязательно вам ответим!</h2>
-			<input type="text" class="feedback__input" name="name" placeholder="Как вас зовут?">
-			<input type="email" class="feedback__input" name="email" placeholder="Ваша почта для ответа?" required>
-			<textarea class="feedback__textarea" name="textarea" placeholder="Напишите что-нибудь..." required></textarea>
-			<button class="feedback__button button" type="submit" name="feedback">Отправить</button>
-			<span class="feedback__close"></span>
-		</form>
 		<footer class="footer container">
 			<ul class="footer__social social">
 				<li class="social__item">
@@ -384,6 +378,17 @@
 				</p>
 			</div>
 		</footer>
+		<div class="popup-feedback">
+				<h2 class="feedback__title">Мы обязательно вам ответим!</h2>
+				<span class="feedback__close"></span>
+			<form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+				<input type="text" class="feedback__input" name="name" placeholder="Как вас зовут?">
+				<input type="email" class="feedback__input" name="email" placeholder="Ваша почта для ответа?" required>
+				<textarea class="feedback__textarea" name="textarea" placeholder="Напишите что-нибудь..." required></textarea>
+				<button class="feedback__button button" type="submit" name="feedback">Отправить</button>
+			</form>
+		</div>
+		<div class="popup-overlay"></div>
 		<script src="js/script.js"></script>
 	</body>
 </html>
