@@ -40,7 +40,7 @@ body {
 	box-sizing: border-box;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 1.9%;
+	padding: 0 27px;
 }
 
 .flex__container {
@@ -173,7 +173,6 @@ body {
 	display: block;
 	font-size: 14px;
 	line-height: 20px;
-	margin-bottom: 1px;
 	text-align: left;
 }
 
@@ -193,7 +192,7 @@ body {
 	position: absolute;
 	display: block;
 	margin: 0 auto;
-	padding: 7px 28px 12px 27px;
+	padding: 8px 28px 12px 27px;
 	margin-top: 28px;
 	font-size: 18px;
 	font-weight: 700;
@@ -420,7 +419,7 @@ body {
 	margin: 0;
 	padding: 0;
 	margin-left: auto;
-	margin-right: 3px;
+	margin-bottom: 3px;
 }
 
 .user-nav__item {
@@ -432,7 +431,7 @@ body {
 }
 
 .user-nav__item:last-child {
-	margin-right: -3px;
+	margin-right: 0px;
 }
 
 .user-nav__item_search {
@@ -625,11 +624,12 @@ body {
 	background-image: url(../img/icons/basket-white.svg);
 	background-repeat: no-repeat;
 	background-position: 15px 6px;
-	padding: 8px 15px 8px 44px;
+	padding: 8px 17px 8px 44px;     background-position: 17px 6px;
 }
 
 .user-nav__button_basket-red {
 	background-image: url(../img/icons/basket-red.svg);
+	background-position: 17px 6px;
 }
 
 .user-nav__item:hover .user-nav__button_basket {
@@ -669,7 +669,7 @@ body {
 	list-style: none;
 	padding: 0;
 	font-size: 0;
-	margin-bottom: 2px;
+	margin-bottom: 3px;
 }
 
 .breadcrumbs__item {
@@ -862,8 +862,7 @@ body {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	top: 1px;
-	left: -7px;
+	left: -6px;
 	padding: 5px;
 	border-width: 3px;
 	border-radius: 50%;
@@ -907,7 +906,7 @@ body {
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 18px;
-	padding: 7px 27px 8px 16px;
+	padding: 7px 29px 8px 16px;
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -996,9 +995,8 @@ body {
 	list-style: none;
 	align-items: flex-start;
 	justify-content: flex-start;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 	margin: 0 -13px;
-	margin-bottom: 47px;
+	margin-bottom: 49px;
 }
 
 .goods-top {
@@ -1007,7 +1005,7 @@ body {
 	align-items: flex-start;
 	justify-content: center;
 	margin: 0 -13px;
-	margin-bottom: -3.066641%;
+	margin-bottom: -37px;
 }
 
 .goods__item {
@@ -1112,7 +1110,9 @@ body {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	margin-bottom: 33px;
+	margin-bottom: 3px;
+    padding-bottom: 29px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .pagination__container {
@@ -1145,7 +1145,7 @@ body {
 	font-weight: 500;
 	line-height: 26px;
 	width: 26px;
-	height: 27px;
+	height: 25px;
 }
 
 .pagination__link:not([href]) .pagination__img {
@@ -1278,7 +1278,7 @@ body {
 
 .slider__controls {
 	position: absolute;
-	left: 2.2%;
+	left: 2.1%;
 	top: 63.6%;
 }
 
@@ -1368,7 +1368,7 @@ body {
 .news__item {
 	position: relative;
 	width: 48.95%;
-	padding: 14px 20px 7.8% 19px;
+	padding: 15px 20px 7.8% 19px;
 	box-sizing: border-box;
 	text-align: right;
 	border-radius: 16px;
@@ -1384,14 +1384,12 @@ body {
 
 .news__item_raspberry {
 	padding-left: 18px;
-	padding-top: 14px;
 	background-color: #AC3950;
 	background-image: url(../img/theme/raspberry.jpg);
 }
 
 .news__item_chocolate {
 	padding-left: 20px;
-	padding-top: 14px;
 	background-color: #65483A;
 	background-image: url(../img/theme/chocolate.jpg);
 }
@@ -1436,7 +1434,7 @@ body {
 	text-shadow: none;
 }
 
-.theme_chocolate .news__link {
+.news__item_chocolate .news__link {
 	padding: 9px 21px 13px 21px;
 	margin-bottom: 1px;
 }
@@ -1646,17 +1644,6 @@ body {
 	border: 0;
 }
 
-.map__container {
-	display: block;
-	margin: 0 auto;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	margin-left: -600px;
-	min-width: 1200px;
-	overflow: hidden;
-	min-height: 400px;
-}
 
 .map__contacts {
 	box-sizing: border-box;
@@ -1665,8 +1652,9 @@ body {
 	padding: 28px 55px 101px 25px;
 	background-color: #fff;
 	border-radius: 10px;
-	right: 27px;
-	bottom: 34px;
+	left: 50%;
+    margin-left: 272px;
+    bottom: 71px;
 }
 
 .map__marker {
@@ -1796,7 +1784,22 @@ body {
 }
 
 @media (max-width: 1100px) {
+	
+	.goods__item {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
 	.goods__button {
 		padding: 10px 14px;
 	}
+
+	.map__contacts {
+		margin-left: 279px;
+	}
+
+	.container {
+		padding: 0 20px;
+	}
 }
+
