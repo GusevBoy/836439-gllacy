@@ -7,6 +7,8 @@
 	var feedback__name = feedback.querySelector("[name=name]");
 	var feedback__email = feedback.querySelector("[name=email]");
 	var feedback__textarea = feedback.querySelector(".feedback__textarea");
+	var form = feedback.querySelector(".feedback");
+	var feedback__button = feedback.querySelector(".feedback__button");
 
 	contacts__button.addEventListener("click", function (evt) {
 		evt.preventDefault();
@@ -29,3 +31,12 @@
 			}
 		}
 	});
+
+	feedback__button.addEventListener("click", function (evt) {
+		if (!feedback__email.value || !feedback__textarea.value) {
+			evt.preventDefault();
+			feedback.classList.remove("popup-feedback_error");
+			feedback.offsetWidth = feedback.offsetWidth;
+			feedback.classList.add("popup-feedback_error");
+	 }
+	 });

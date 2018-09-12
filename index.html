@@ -5,7 +5,7 @@
 		<title>HTML Academy: Глейси</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-		<link rel="stylesheet" href="css/master.css">
+		<link rel="stylesheet" href="css/master-min.css">
 	</head>
 	<body>
 		<header class="header container">
@@ -15,7 +15,7 @@
 				</a>
 				<nav class="header__main-nav">
 					<ul class="header__site-nav site-nav">
-						<li class="site-nav__item site-nav__item-goods">
+						<li class="site-nav__item site-nav__item-goods" tabindex="0">
 							<span class="site-nav__link">Каталог</span>
 							<div class="site-nav__container">
 								<ul class="site-nav__popup popup">
@@ -48,8 +48,8 @@
 					</ul>
 					<ul class="header__user-nav user-nav">
 						<li class="user-nav__item user-nav__item_search">
-							<button class="user-nav__button user-nav__button_search">
-							</button>
+							<a class="user-nav__button user-nav__button_search" href="#" aria-label="Поиск" tabindex="0">
+							</a>
 							<div class="user-nav__container">
 								<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get">
 								<label class="form__label">
@@ -60,8 +60,8 @@
 							</div>
 						</li>
 						<li class="user-nav__item">
-							<button class="user-nav__button user-nav__button_login">Вход
-							</button>
+							<a class="user-nav__button user-nav__button_login" href="#" aria-label="Вход" tabindex="0">Вход
+							</a>
 							<div class="user-nav__container">
 								<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
 									<label class="form__label">
@@ -87,8 +87,8 @@
 							</div>
 						</li>
 						<li class="user-nav__item">
-							<button class="user-nav__button user-nav__button_basket">Пусто
-							</button>
+							<a class="user-nav__button user-nav__button_basket" href="#" aria-label="Корзина" tabindex="0">Пусто
+							</a>
 							<div class="user-nav__container hidden">
 								<div class="user-nav__popup popup">
 									<div class="popup__order order">
@@ -160,7 +160,7 @@
 						<a href="#" class="slider__link button">Давайте оба!</a>
 					</div>
 				</div>
-				<div class="slider__controls">
+				<div class="slider__controls" aria-label="Переключатель слайдов">
 					<label class="slider__label">
 						<input class="slider__input" type="radio" name="slider" checked>
 						<span class="slider__disc"></span>
@@ -296,14 +296,16 @@
 		</main>
 		<div class="map">
 			<iframe class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858716196522!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1536510827883" width="600" height="433" style="border:0" allowfullscreen></iframe>
-			<div class="map__contacts contacts">
-				<h2 class="contacts__title hidden">Контактная информация</h2>
-				<span class="contacts__desc-addres">Адрес главного офиса и&nbsp;офлайн&#8209;магазина:</span>
-				<span class="contacts__addres">ул. Большая Конюшенная 19/8,&nbsp;Санкт-Петербург</span>
-				<span class="contacts__desc-phone">Для заказов по телефону</span>
-				<span class="contacts__phone contacts__phone_s">8 812 450-25-25</span>
-				<span class="contacts__work-time">(c 10 до 20,ежедневно )</span>
-				<button class="contacts__button button" type="button" name="button-communication">Форма обратной связи</button>
+			<div class="container map__container">
+				<div class="map__contacts contacts">
+					<h2 class="contacts__title hidden">Контактная информация</h2>
+					<span class="contacts__desc-addres">Адрес главного офиса и&nbsp;офлайн&#8209;магазина:</span>
+					<span class="contacts__addres">ул. Большая Конюшенная 19/8,&nbsp;Санкт-Петербург</span>
+					<span class="contacts__desc-phone">Для заказов по телефону</span>
+					<span class="contacts__phone contacts__phone_s">8 812 450-25-25</span>
+					<span class="contacts__work-time">(c 10 до 20,ежедневно )</span>
+					<button class="contacts__button button" type="button" name="button-communication">Форма обратной связи</button>
+				</div>
 			</div>
 		</div>
 		<footer class="footer container">
@@ -364,7 +366,7 @@
 		<div class="popup-feedback">
 			<h2 class="feedback__title">Мы обязательно вам ответим!</h2>
 			<span class="feedback__close"></span>
-			<form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+			<form class="feedback" action="https://echo.htmlacademy.ru" method="post" value="hello">
 				<input type="text" class="feedback__input" name="name" placeholder="Как вас зовут?">
 				<input type="email" class="feedback__input" name="email" placeholder="Ваша почта для ответа?" required>
 				<textarea class="feedback__textarea" name="textarea" placeholder="Напишите что-нибудь..." required></textarea>
@@ -372,6 +374,6 @@
 			</form>
 		</div>
 		<div class="popup-overlay"></div>
-		<script src="js/script.js"></script>
+		<script src="js/script-min.js"></script>
 	</body>
 </html>

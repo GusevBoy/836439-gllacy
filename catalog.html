@@ -5,7 +5,7 @@
 		<title>HTML Academy: Глейси</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-		<link rel="stylesheet" href="css/master.css">
+		<link rel="stylesheet" href="css/master-min.css">
 	</head>
 	<body>
 		<header class="header container">
@@ -16,7 +16,7 @@
 				<nav class="header__main-nav">
 					<ul class="header__site-nav site-nav">
 						<li class="site-nav__item site-nav__item-goods">
-							<span class="site-nav__link site-nav__link_active">Каталог</span>
+							<span class="site-nav__link site-nav__link_active" tabindex="0">Каталог</span>
 							<div class="site-nav__container">
 								<ul class="site-nav__popup popup">
 								<li class="popup__item">
@@ -48,8 +48,8 @@
 					</ul>
 					<ul class="header__user-nav user-nav">
 						<li class="user-nav__item">
-							<button class="user-nav__button user-nav__button_search">
-							</button>
+							<a class="user-nav__button user-nav__button_search" href="#" aria-label="Поиск">
+							</a>
 							<div class="user-nav__container">
 								<form class="user-nav__form form" action="https://echo.htmlacademy.ru" method="get">
 								<label class="form__label">
@@ -60,9 +60,9 @@
 							</div>
 						</li>
 						<li class="user-nav__item">
-							<button class="user-nav__button user-nav__button_login">
+							<a class="user-nav__button user-nav__button_login" href="#" aria-label="Вход" tabindex="0">
 								<span class="user-nav__desc">Вход</span>
-							</button>
+							</a>
 							<div class="user-nav__container">
 								<form class="user-nav__form user-nav__form_login form" action="https://echo.htmlacademy.ru" method="post">
 									<label class="form__label">
@@ -88,9 +88,9 @@
 							</div>
 						</li>
 						<li class="user-nav__item">
-							<button class="user-nav__button user-nav__button_active user-nav__button_basket-red">
+							<a class="user-nav__button user-nav__button_active user-nav__button_basket-red" href="#" aria-label="Корзина" tabindex="0">
 								<span class="user-nav__desc">2 товара</span>
-							</button>
+							</a>
 							<div class="user-nav__container">
 								<div class="user-nav__popup popup">
 									<div class="popup__order order">
@@ -158,7 +158,7 @@
 				<button class="filter__button" type="submit">Применить</button>
 				<fieldset class="filter__list">
 					<legend class="filter__title">Сортировка:</legend>
-					<select class="filter__select" name="sorting">
+					<select class="filter__select" name="sorting" tabindex="0">
 						<option class="filter__option" value="popularity">по популярности</option>
 						<option class="filter__option" value="taste">сначала недорогие</option>
 						<option class="filter__option" value="price">сначала дорогие</option>
@@ -173,7 +173,7 @@
 					<label class="filter__label hidden">
 						<input class="filter__input" type="number" name="max-price">Максимальная цена
 					</label>
-					<div class="filter__range range">
+					<div class="filter__range range" tabindex="0">
 						<div class="range__line">
 							<div class="range__layer">
 								<div class="range__circle"></div>
@@ -185,7 +185,7 @@
 				</fieldset>
 				<fieldset class="filter__list">
 					<legend class="filter__title">Жирность:</legend>
-					<div class="filter__radio radio">
+					<div class="filter__radio radio" tabindex="0">
 						<label class="radio__label">
 							<input class="radio__input" type="radio" name="caloricity">
 							<span class="radio__disc"></span>
@@ -210,7 +210,7 @@
 				</fieldset>
 				<fieldset class="filter__list">
 					<legend class="filter__title">Наполнители:</legend>
-					<div class="filter__checkbox checkbox">
+					<div class="filter__checkbox checkbox" tabindex="0">
 						<label class="checkbox__label">
 							<input class="checkbox__input" type="checkbox" name="fillers">
 							<span class="checkbox__square"></span>
